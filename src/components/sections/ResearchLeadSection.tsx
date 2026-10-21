@@ -32,13 +32,12 @@ export const ResearchLeadSection: React.FC = () => {
                   alt={RESEARCH_LEAD_DATA.name}
                   className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-102"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-70" />
 
-                <div className="absolute bottom-4 left-4 right-4">
-                  <span className="text-[10px] uppercase font-bold text-sky-300 block">
+                <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md rounded-xl p-3 border border-slate-200 shadow-xs">
+                  <span className="text-[10px] uppercase font-bold text-[#0D9488] block">
                     Principal Investigator
                   </span>
-                  <span className="text-lg font-bold text-white">
+                  <span className="text-base font-bold text-slate-900">
                     {RESEARCH_LEAD_DATA.name}
                   </span>
                 </div>
@@ -81,7 +80,7 @@ export const ResearchLeadSection: React.FC = () => {
               </div>
 
               {/* Institution Pill */}
-              <div className="bg-white p-3.5 rounded-xl border border-slate-200/80 text-xs text-slate-600">
+              <div className="bg-white p-3.5 rounded-xl border border-slate-200/80 text-xs text-slate-600 shadow-2xs">
                 <div className="font-semibold text-slate-900">{RESEARCH_LEAD_DATA.institution}</div>
                 <div className="text-[11px] text-slate-500 mt-0.5">{RESEARCH_LEAD_DATA.department}</div>
               </div>
@@ -107,7 +106,7 @@ export const ResearchLeadSection: React.FC = () => {
                 {RESEARCH_LEAD_DATA.stats.map((stat) => (
                   <div
                     key={stat.label}
-                    className="bg-white p-4 rounded-xl border border-slate-200/80 shadow-xs"
+                    className="bg-white p-4 rounded-xl border border-slate-200/80 shadow-2xs"
                   >
                     <span className="text-[11px] text-slate-500 block font-medium">
                       {stat.label}

@@ -44,7 +44,6 @@ export const ProductsSection: React.FC = () => {
                     alt={product.name}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-60" />
 
                   <div className="absolute top-3 left-3">
                     <span className="px-2.5 py-1 bg-white/95 backdrop-blur-md text-xs font-bold text-slate-800 rounded-md shadow-xs">
@@ -53,7 +52,7 @@ export const ProductsSection: React.FC = () => {
                   </div>
 
                   <div className="absolute bottom-3 right-3">
-                    <span className="px-2.5 py-0.5 bg-sky-950/90 backdrop-blur-md text-[10px] font-mono font-semibold text-sky-300 rounded border border-sky-800">
+                    <span className="px-2.5 py-0.5 bg-white/95 backdrop-blur-md text-[10px] font-mono font-semibold text-[#0B2545] rounded-md border border-slate-200 shadow-2xs">
                       {product.status}
                     </span>
                   </div>
@@ -121,7 +120,7 @@ export const ProductsSection: React.FC = () => {
         </div>
       </div>
 
-      {/* Technical Specifications Modal */}
+      {/* Technical Specifications Modal (Pure Light Theme) */}
       <AnimatePresence>
         {activeModalProduct && (
           <div
@@ -136,7 +135,7 @@ export const ProductsSection: React.FC = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setActiveModalProduct(null)}
-              className="fixed inset-0 bg-slate-950/70 backdrop-blur-sm"
+              className="fixed inset-0 bg-slate-950/60 backdrop-blur-sm"
             />
 
             {/* Modal Dialog */}

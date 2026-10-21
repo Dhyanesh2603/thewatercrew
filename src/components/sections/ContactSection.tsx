@@ -175,43 +175,42 @@ export const ContactSection: React.FC = () => {
             )}
           </div>
 
-          {/* Right Column: Lab Location & Coordinates */}
+          {/* Right Column: Lab Location & Coordinates (Clean Light Theme) */}
           <div className="lg:col-span-5 space-y-6">
-            {/* Interactive University Map Card */}
             <div className="bg-[#FAFBFC] rounded-3xl p-6 sm:p-7 border border-slate-200/90 shadow-sm space-y-4">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold uppercase tracking-wider text-[#0D9488] flex items-center gap-1.5">
                   <Compass className="w-3.5 h-3.5" />
                   Laboratory Coordinates
                 </span>
-                <span className="font-mono text-[11px] text-slate-500 font-semibold">
+                <span className="font-mono text-[11px] text-slate-600 font-bold">
                   12.9692° N, 79.1559° E
                 </span>
               </div>
 
-              {/* Map Illustration Placeholder */}
-              <div className="relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 aspect-[16/10] flex items-center justify-center p-4">
-                {/* SVG Coordinate Grid Map */}
+              {/* Light Blueprint Coordinate Map */}
+              <div className="relative rounded-2xl overflow-hidden bg-sky-50/70 border border-sky-200/80 aspect-[16/10] flex items-center justify-center p-4">
+                {/* Blueprint Grid Lines */}
                 <div
-                  className="absolute inset-0 opacity-20"
+                  className="absolute inset-0 opacity-40"
                   style={{
-                    backgroundImage: `linear-gradient(#38BDF8 1px, transparent 1px), linear-gradient(to right, #38BDF8 1px, transparent 1px)`,
+                    backgroundImage: `linear-gradient(#0284C7 1px, transparent 1px), linear-gradient(to right, #0284C7 1px, transparent 1px)`,
                     backgroundSize: '24px 24px',
                   }}
                 />
-                {/* Concentric Radar Rings */}
-                <div className="absolute w-44 h-44 rounded-full border border-sky-500/20 animate-ping" />
-                <div className="absolute w-28 h-28 rounded-full border border-sky-500/40" />
+                {/* Radar Rings */}
+                <div className="absolute w-44 h-44 rounded-full border border-sky-400/30 animate-ping" />
+                <div className="absolute w-28 h-28 rounded-full border border-sky-400/50" />
 
                 {/* Pin Point */}
                 <div className="relative z-10 flex flex-col items-center text-center">
-                  <div className="w-9 h-9 rounded-full bg-sky-500 text-slate-950 flex items-center justify-center shadow-lg shadow-sky-500/50">
-                    <MapPin className="w-5 h-5" />
+                  <div className="w-10 h-10 rounded-full bg-[#0B2545] text-white flex items-center justify-center shadow-md shadow-[#0B2545]/20">
+                    <MapPin className="w-5 h-5 text-sky-300" />
                   </div>
-                  <span className="text-xs font-bold text-white mt-2 px-2.5 py-1 rounded bg-slate-950/80 border border-slate-800">
+                  <span className="text-xs font-bold text-slate-900 mt-2 px-3 py-1 rounded-lg bg-white/95 border border-slate-200 shadow-xs">
                     Technology Tower · Fluid Mechanics Lab
                   </span>
-                  <span className="text-[10px] text-sky-300 font-mono mt-0.5">
+                  <span className="text-[11px] text-[#0D9488] font-mono font-semibold mt-1">
                     VIT Vellore Campus
                   </span>
                 </div>

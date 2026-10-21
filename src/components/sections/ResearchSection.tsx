@@ -54,21 +54,20 @@ export const ResearchSection: React.FC = () => {
                       loading="lazy"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-80" />
 
                     {/* Facility Badge */}
                     <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1 bg-white/95 backdrop-blur-md text-[#0B2545] text-xs font-bold rounded-lg border border-slate-200/80 shadow-sm">
+                      <span className="px-3 py-1 bg-white/95 backdrop-blur-md text-[#0B2545] text-xs font-bold rounded-lg border border-slate-200/80 shadow-xs">
                         {facility.badge}
                       </span>
                     </div>
 
-                    {/* Technical Metric Float */}
-                    <div className="absolute bottom-4 right-4 bg-slate-900/90 backdrop-blur-md border border-slate-800 text-white rounded-xl px-4 py-2.5 shadow-lg">
-                      <div className="text-[10px] uppercase font-bold text-slate-400">
+                    {/* Technical Metric Float (Light Theme) */}
+                    <div className="absolute bottom-4 right-4 bg-white/95 backdrop-blur-md border border-slate-200 text-slate-900 rounded-xl px-4 py-2.5 shadow-md">
+                      <div className="text-[10px] uppercase font-bold text-slate-500">
                         {facility.metricLabel}
                       </div>
-                      <div className="text-sm font-mono font-bold text-sky-400">
+                      <div className="text-sm font-mono font-bold text-[#0B2545]">
                         {facility.metricValue}
                       </div>
                     </div>

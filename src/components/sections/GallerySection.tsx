@@ -83,19 +83,19 @@ export const GallerySection: React.FC = () => {
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108"
                 />
 
-                {/* Dark Technical Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/25 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-300" />
+                {/* Subtle Clean Gradient Overlay on Hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent opacity-75 group-hover:opacity-90 transition-opacity duration-300" />
 
                 {/* Category Pill Top Left */}
                 <div className="absolute top-4 left-4 z-10">
-                  <span className="px-2.5 py-1 bg-white/90 backdrop-blur-md text-[10px] font-bold text-slate-800 rounded-md shadow-xs">
+                  <span className="px-2.5 py-1 bg-white/95 backdrop-blur-md text-[10px] font-bold text-slate-800 rounded-md shadow-xs">
                     {item.category}
                   </span>
                 </div>
 
                 {/* Zoom Icon Top Right */}
                 <div className="absolute top-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                  <div className="w-8 h-8 rounded-lg bg-black/50 backdrop-blur-md flex items-center justify-center text-white">
+                  <div className="w-8 h-8 rounded-lg bg-white/90 backdrop-blur-md flex items-center justify-center text-slate-800 shadow-xs">
                     <Maximize2 className="w-4 h-4" />
                   </div>
                 </div>
@@ -118,7 +118,7 @@ export const GallerySection: React.FC = () => {
         </motion.div>
       </div>
 
-      {/* Lightbox Modal */}
+      {/* Light Theme Lightbox Modal */}
       <AnimatePresence>
         {selectedItem && (
           <div
@@ -133,42 +133,42 @@ export const GallerySection: React.FC = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedItem(null)}
-              className="fixed inset-0 bg-slate-950/85 backdrop-blur-md"
+              className="fixed inset-0 bg-slate-950/60 backdrop-blur-sm"
             />
 
-            {/* Modal Dialog */}
+            {/* Modal Dialog (Pure Light Theme) */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.25, ease: easeEngineering }}
-              className="relative w-full max-w-4xl bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-2xl z-10 text-white"
+              className="relative w-full max-w-4xl bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-2xl z-10 text-slate-900"
             >
-              <div className="relative aspect-[16/10] bg-black">
+              <div className="relative aspect-[16/10] bg-slate-100">
                 <img
                   src={selectedItem.image}
                   alt={selectedItem.title}
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover"
                 />
                 <button
                   type="button"
                   onClick={() => setSelectedItem(null)}
-                  className="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/60 hover:bg-black/90 text-white flex items-center justify-center transition-colors"
+                  className="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-slate-700 hover:text-slate-950 flex items-center justify-center transition-colors shadow-sm"
                 >
                   <X className="w-5 h-5" />
                 </button>
               </div>
 
-              <div className="p-6 bg-slate-900">
+              <div className="p-6 sm:p-7 bg-white">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="px-2.5 py-0.5 rounded bg-sky-950 text-sky-300 text-xs font-mono font-semibold border border-sky-800">
+                  <span className="px-2.5 py-0.5 rounded bg-sky-50 text-[#0B2545] text-xs font-mono font-semibold border border-sky-100">
                     {selectedItem.category} · {selectedItem.date}
                   </span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">
+                <h3 className="text-xl font-bold text-slate-900 mb-2">
                   {selectedItem.title}
                 </h3>
-                <p className="text-sm text-slate-300 leading-relaxed">
+                <p className="text-sm text-slate-600 leading-relaxed">
                   {selectedItem.description}
                 </p>
               </div>
