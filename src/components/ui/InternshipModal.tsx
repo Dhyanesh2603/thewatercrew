@@ -297,18 +297,18 @@ export const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClos
                   </div>
 
                   {/* Actions */}
-                  <div className="flex items-center justify-end gap-3 pt-3 border-t border-slate-100">
+                  <div className="flex flex-col-reverse sm:flex-row sm:items-center justify-end gap-2.5 sm:gap-3 pt-3 border-t border-slate-100">
                     <button
                       type="button"
                       onClick={onClose}
-                      className="px-4 py-2.5 text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors"
+                      className="w-full sm:w-auto px-4 py-2.5 text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors cursor-pointer"
                     >
                       Cancel
                     </button>
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="px-6 py-2.5 bg-[#0B2545] text-white text-sm font-semibold rounded-xl hover:bg-[#133E87] transition-all shadow-sm disabled:opacity-50"
+                      className="w-full sm:w-auto px-6 py-2.5 bg-[#0B2545] text-white text-sm font-semibold rounded-xl hover:bg-[#133E87] transition-all shadow-sm disabled:opacity-50 cursor-pointer"
                     >
                       {isSubmitting ? 'Submitting Credentials...' : 'Submit Application'}
                     </button>

@@ -240,7 +240,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInternship }) => {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.25, ease: 'easeInOut' }}
-              className="md:hidden bg-white/98 backdrop-blur-xl border-b border-slate-200 shadow-xl overflow-hidden px-5 py-6 mt-3"
+              className="md:hidden bg-white/98 backdrop-blur-xl border-b border-slate-200 shadow-xl overflow-hidden px-5 py-6 mt-3 max-h-[85vh] overflow-y-auto"
             >
               <div className="space-y-1">
                 {NAV_ITEMS.map((item) => {

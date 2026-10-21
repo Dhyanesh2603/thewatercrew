@@ -162,7 +162,7 @@ export const ContactSection: React.FC = () => {
                     />
                   </div>
 
-                  <div className="pt-2 flex items-center justify-between">
+                  <div className="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <span className="text-[11px] text-slate-500">
                       Typical response latency: &lt; 48 hours during academic terms.
                     </span>

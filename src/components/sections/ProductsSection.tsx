@@ -304,13 +304,13 @@ export const ProductsSection: React.FC = () => {
               </div>
 
               {/* Footer */}
-              <div className="px-6 py-4 bg-slate-50 border-t border-slate-200 flex items-center justify-between">
-                <span className="text-xs text-slate-500">
+              <div className="px-6 py-4 bg-slate-50 border-t border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+                <span className="text-[11px] sm:text-xs text-slate-500">
                   Documentation version: Prototype Rev 2.4
                 </span>
                 <Button
                   onClick={() => setActiveModalProduct(null)}
-                  className="bg-[#0B2545] hover:bg-[#133E87] text-white text-xs"
+                  className="w-full sm:w-auto bg-[#0B2545] hover:bg-[#133E87] text-white text-xs cursor-pointer"
                 >
                   Close Specification
                 </Button>
