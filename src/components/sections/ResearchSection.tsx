@@ -13,7 +13,7 @@ export const ResearchSection: React.FC = () => {
         {/* Section Header */}
         <div className="max-w-3xl mb-20">
           <Badge variant="outline" className="mb-3 text-xs font-semibold text-slate-700 bg-white">
-            <Microscope className="w-3.5 h-3.5 text-[#0B2545] mr-1.5" />
+            <Microscope className="w-3.5 h-3.5 text-[#076E73] mr-1.5" />
             FACILITIES & EXPERIMENTAL RIGS
           </Badge>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
@@ -58,7 +58,7 @@ export const ResearchSection: React.FC = () => {
 
                     {/* Facility Badge */}
                     <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1 bg-white/95 backdrop-blur-md text-[#0B2545] text-xs font-bold rounded-lg border border-slate-200/80 shadow-xs">
+                      <span className="px-3 py-1 bg-white/95 backdrop-blur-md text-[#0B2A3C] text-xs font-bold rounded-lg border border-slate-200/80 shadow-xs">
                         {facility.badge}
                       </span>
                     </div>
@@ -68,7 +68,7 @@ export const ResearchSection: React.FC = () => {
                       <div className="text-[10px] uppercase font-bold text-slate-500">
                         {facility.metricLabel}
                       </div>
-                      <div className="text-sm font-mono font-bold text-[#0B2545]">
+                      <div className="text-sm font-mono font-bold text-[#076E73]">
                         {facility.metricValue}
                       </div>
                     </div>
@@ -103,7 +103,7 @@ export const ResearchSection: React.FC = () => {
                     <ul className="space-y-2.5">
                       {facility.specifications.map((spec) => (
                         <li key={spec} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700">
-                          <CheckCircle2 className="w-4 h-4 text-[#0B2545] shrink-0 mt-0.5" />
+                          <CheckCircle2 className="w-4 h-4 text-[#076E73] shrink-0 mt-0.5" />
                           <span className="leading-snug">{spec}</span>
                         </li>
                       ))}

@@ -24,7 +24,7 @@ export const MetricBadge: React.FC<MetricBadgeProps> = ({
       <span className="text-[10px] sm:text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">
         {label}
       </span>
-      <span className="text-base sm:text-lg font-mono font-bold text-[#0B2545] mt-0.5 block">
+      <span className="text-base sm:text-lg font-mono font-bold text-[#0B2A3C] mt-0.5 block">
         {value}
       </span>
       {subtext && (

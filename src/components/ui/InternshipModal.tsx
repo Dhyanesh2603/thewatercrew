@@ -88,8 +88,8 @@ export const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClos
             {/* Header */}
             <div className="sticky top-0 bg-white/95 backdrop-blur-md px-6 py-5 border-b border-slate-100 flex items-center justify-between z-10">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center text-[#0B2545]">
-                  <GraduationCap className="w-5 h-5 text-[#0B2545]" />
+                <div className="w-10 h-10 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center text-[#076E73]">
+                  <GraduationCap className="w-5 h-5 text-[#076E73]" />
                 </div>
                 <div>
                   <h2 id="internship-modal-title" className="text-lg font-bold text-slate-900 tracking-tight">
@@ -125,7 +125,7 @@ export const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClos
                     <button
                       type="button"
                       onClick={handleReset}
-                      className="px-6 py-2.5 bg-[#0B2545] text-white text-sm font-semibold rounded-xl hover:bg-[#133E87] transition-colors shadow-sm"
+                      className="px-6 py-2.5 bg-[#0B2A3C] text-white text-sm font-semibold rounded-xl hover:bg-[#076E73] transition-colors shadow-sm"
                     >
                       Return to Research Portal
                     </button>
@@ -134,7 +134,7 @@ export const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClos
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="bg-sky-50/60 border border-sky-100 rounded-xl p-4 text-xs text-sky-950 flex items-start gap-3">
-                    <Building2 className="w-4 h-4 text-[#0B2545] shrink-0 mt-0.5" />
+                    <Building2 className="w-4 h-4 text-[#076E73] shrink-0 mt-0.5" />
                     <p className="leading-relaxed">
                       We offer semester research cohorts and summer hardware residencies focused on autonomous marine surface vessels, oleophilic interfacial capture, and real-time CFD modeling.
                     </p>
@@ -151,7 +151,7 @@ export const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClos
                         placeholder="e.g. Alex Chen"
                         value={formData.fullName}
                         onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                        className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0B2545]/20 focus:border-[#0B2545] transition-all"
+                        className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0B2A3C]/20 focus:border-[#0B2A3C] transition-all"
                       />
                     </div>
 
@@ -165,7 +165,7 @@ export const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClos
                         placeholder="name@institution.edu"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0B2545]/20 focus:border-[#0B2545] transition-all"
+                        className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0B2A3C]/20 focus:border-[#0B2A3C] transition-all"
                       />
                     </div>
                   </div>
@@ -181,7 +181,7 @@ export const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClos
                         placeholder="e.g. Vellore Institute of Technology"
                         value={formData.university}
                         onChange={(e) => setFormData({ ...formData, university: e.target.value })}
-                        className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0B2545]/20 focus:border-[#0B2545] transition-all"
+                        className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0B2A3C]/20 focus:border-[#0B2A3C] transition-all"
                       />
                     </div>
 
@@ -195,7 +195,7 @@ export const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClos
                         placeholder="e.g. B.Tech Mechanical Engineering"
                         value={formData.degreeMajor}
                         onChange={(e) => setFormData({ ...formData, degreeMajor: e.target.value })}
-                        className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0B2545]/20 focus:border-[#0B2545] transition-all"
+                        className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0B2A3C]/20 focus:border-[#0B2A3C] transition-all"
                       />
                     </div>
                   </div>
@@ -213,7 +213,7 @@ export const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClos
                             discipline: e.target.value as InternshipFormData['discipline'],
                           })
                         }
-                        className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0B2545]/20 focus:border-[#0B2545] transition-all"
+                        className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0B2A3C]/20 focus:border-[#0B2A3C] transition-all"
                       >
                         <option value="Control Systems & Embedded">Control Systems & Embedded Telemetry</option>
                         <option value="Fluid Dynamics & CAD">Fluid Dynamics & Hydrodynamic CFD</option>
@@ -229,7 +229,7 @@ export const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClos
                       <select
                         value={formData.yearOfStudy}
                         onChange={(e) => setFormData({ ...formData, yearOfStudy: e.target.value })}
-                        className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0B2545]/20 focus:border-[#0B2545] transition-all"
+                        className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0B2A3C]/20 focus:border-[#0B2A3C] transition-all"
                       >
                         <option>2nd Year Undergraduate</option>
                         <option>Pre-final Year (3rd Year)</option>
@@ -249,7 +249,7 @@ export const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClos
                       placeholder="Briefly describe hands-on experience in CAD, embedded firmware, wave flumes, or fluid mechanics relevant to our prototype..."
                       value={formData.statement}
                       onChange={(e) => setFormData({ ...formData, statement: e.target.value })}
-                      className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0B2545]/20 focus:border-[#0B2545] transition-all resize-none"
+                      className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0B2A3C]/20 focus:border-[#0B2A3C] transition-all resize-none"
                     />
                   </div>
 
@@ -262,7 +262,7 @@ export const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClos
                       placeholder="https://github.com/username or LinkedIn"
                       value={formData.portfolioUrl}
                       onChange={(e) => setFormData({ ...formData, portfolioUrl: e.target.value })}
-                      className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0B2545]/20 focus:border-[#0B2545] transition-all"
+                      className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0B2A3C]/20 focus:border-[#0B2A3C] transition-all"
                     />
                   </div>
 
@@ -308,7 +308,7 @@ export const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClos
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full sm:w-auto px-6 py-2.5 bg-[#0B2545] text-white text-sm font-semibold rounded-xl hover:bg-[#133E87] transition-all shadow-sm disabled:opacity-50 cursor-pointer"
+                      className="w-full sm:w-auto px-6 py-2.5 bg-[#0B2A3C] text-white text-sm font-semibold rounded-xl hover:bg-[#076E73] transition-all shadow-sm disabled:opacity-50 cursor-pointer"
                     >
                       {isSubmitting ? 'Submitting Credentials...' : 'Submit Application'}
                     </button>

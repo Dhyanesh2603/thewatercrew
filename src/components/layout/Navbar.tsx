@@ -76,22 +76,23 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInternship }) => {
             <a
               href="#hero"
               onClick={(e) => handleNavClick(e, '#hero')}
-              className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-[#0B2545]/20 rounded-lg p-1"
+              className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-[#0B2A3C]/20 rounded-lg p-1"
               aria-label="The Water Crew Home"
             >
-              <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-xl overflow-hidden shadow-xs flex items-center justify-center transition-transform group-hover:scale-105 border border-slate-200/60 bg-[#0B2545]">
+              <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-xl overflow-hidden shadow-xs flex items-center justify-center transition-transform group-hover:scale-105 border border-slate-200/60 bg-transparent">
                 <img
-                  src="/logo.svg"
+                  src="/logo.png"
                   alt="The Water Crew Logo"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-base sm:text-lg font-extrabold tracking-tight text-slate-900">
-                  THE WATER CREW
+                <span className="text-base sm:text-lg font-extrabold tracking-tight">
+                  <span className="text-[#0B2A3C]">thewater</span>
+                  <span className="text-[#076E73]">crew</span>
                 </span>
-                <span className="text-[10px] font-semibold tracking-wider uppercase text-[#0D9488] -mt-0.5">
-                  VIT Deep-Tech Research
+                <span className="text-[10px] font-semibold tracking-wider uppercase text-[#4A6670] -mt-0.5">
+                  OCEAN OIL SPILL RECOVERY
                 </span>
               </div>
             </a>
@@ -145,9 +146,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInternship }) => {
                               }}
                               className="w-full text-left px-3.5 py-2.5 hover:bg-slate-50 transition-colors flex items-start gap-2.5 group/item"
                             >
-                              <GraduationCap className="w-4 h-4 text-[#0B2545] mt-0.5 shrink-0 group-hover/item:text-[#133E87]" />
+                              <GraduationCap className="w-4 h-4 text-[#0B2A3C] mt-0.5 shrink-0 group-hover/item:text-[#076E73]" />
                               <div>
-                                <div className="text-xs font-bold text-slate-900 flex items-center gap-1 group-hover/item:text-[#0B2545]">
+                                <div className="text-xs font-bold text-slate-900 flex items-center gap-1 group-hover/item:text-[#076E73]">
                                   Apply for Internship
                                   <ArrowUpRight className="w-3 h-3 text-slate-400 group-hover/item:translate-x-0.5 group-hover/item:-translate-y-0.5 transition-transform" />
                                 </div>
@@ -165,7 +166,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInternship }) => {
                                 L
                               </div>
                               <div>
-                                <div className="text-xs font-bold text-slate-900 group-hover/item:text-[#0B2545]">
+                                <div className="text-xs font-bold text-slate-900 group-hover/item:text-[#076E73]">
                                   Academic Collaboration
                                 </div>
                                 <p className="text-[11px] text-slate-500 mt-0.5 leading-snug">
@@ -189,7 +190,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInternship }) => {
                     className={cn(
                       'px-3.5 py-2 text-xs lg:text-sm font-semibold rounded-lg transition-all duration-200 relative',
                       isActive
-                        ? 'text-[#0B2545] font-bold bg-slate-100/60'
+                        ? 'text-[#0B2A3C] font-bold bg-[#0B2A3C]/5'
                         : 'text-slate-600 hover:text-slate-950 hover:bg-slate-100/80'
                     )}
                   >
@@ -197,7 +198,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInternship }) => {
                     {isActive && (
                       <motion.div
                         layoutId="activeNavIndicator"
-                        className="absolute bottom-0 left-3 right-3 h-0.5 rounded-full bg-[#0B2545]"
+                        className="absolute bottom-0 left-3 right-3 h-0.5 rounded-full bg-[#0B2A3C]"
                         transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                       />
                     )}
@@ -210,7 +211,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInternship }) => {
                 <a
                   href="#contact"
                   onClick={(e) => handleNavClick(e, '#contact')}
-                  className="px-4 py-2 text-xs lg:text-sm font-semibold rounded-xl transition-all duration-200 shadow-xs bg-[#0B2545] text-white hover:bg-[#133E87] hover:shadow-sm flex items-center gap-1.5"
+                  className="px-4 py-2 text-xs lg:text-sm font-semibold rounded-xl transition-all duration-200 shadow-xs bg-[#0B2A3C] text-white hover:bg-[#076E73] hover:shadow-sm flex items-center gap-1.5"
                 >
                   Contact Lab
                 </a>
@@ -256,15 +257,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInternship }) => {
                             setMobileMenuOpen(false)
                             onOpenInternship()
                           }}
-                          className="w-full text-left px-3 py-2 text-sm font-semibold text-slate-800 hover:text-[#0B2545] hover:bg-slate-50 rounded-lg flex items-center justify-between"
+                          className="w-full text-left px-3 py-2 text-sm font-semibold text-slate-800 hover:text-[#0B2A3C] hover:bg-slate-50 rounded-lg flex items-center justify-between"
                         >
                           <span>Apply for Internship</span>
-                          <ArrowUpRight className="w-4 h-4 text-[#0B2545]" />
+                          <ArrowUpRight className="w-4 h-4 text-[#076E73]" />
                         </button>
                         <a
                           href="#contact"
                           onClick={(e) => handleNavClick(e, '#contact')}
-                          className="w-full text-left px-3 py-2 text-sm font-semibold text-slate-800 hover:text-[#0B2545] hover:bg-slate-50 rounded-lg block"
+                          className="w-full text-left px-3 py-2 text-sm font-semibold text-slate-800 hover:text-[#076E73] hover:bg-slate-50 rounded-lg block"
                         >
                           Academic Collaboration
                         </a>
@@ -281,7 +282,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInternship }) => {
                       className={cn(
                         'block px-3 py-2.5 text-sm font-semibold rounded-lg transition-colors',
                         isActive
-                          ? 'bg-[#0B2545]/10 text-[#0B2545] font-bold'
+                          ? 'bg-[#0B2A3C]/10 text-[#0B2A3C] font-bold'
                           : 'text-slate-700 hover:bg-slate-50 hover:text-slate-900'
                       )}
                     >
@@ -297,7 +298,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInternship }) => {
                       setMobileMenuOpen(false)
                       onOpenInternship()
                     }}
-                    className="w-full py-2.5 bg-[#0B2545] text-white text-sm font-bold rounded-xl hover:bg-[#133E87] transition-colors shadow-sm text-center"
+                    className="w-full py-2.5 bg-[#0B2A3C] text-white text-sm font-bold rounded-xl hover:bg-[#076E73] transition-colors shadow-sm text-center"
                   >
                     Apply for Internship
                   </button>

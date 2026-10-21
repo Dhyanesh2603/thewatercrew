@@ -9,11 +9,11 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant = 'default', size = 'default', ...props }, ref) => {
     const variants = {
-      default: 'bg-[#0B2545] text-white hover:bg-[#133E87] shadow-xs active:scale-[0.99]',
-      outline: 'border border-slate-200 bg-white text-slate-800 hover:bg-slate-50 hover:border-slate-300 shadow-2xs',
-      secondary: 'bg-slate-100 text-slate-900 hover:bg-slate-200/80',
-      ghost: 'hover:bg-slate-100 hover:text-slate-900',
-      link: 'text-[#0B2545] underline-offset-4 hover:underline p-0 h-auto',
+      default: 'bg-[#0B2A3C] text-white hover:bg-[#076E73] shadow-xs active:scale-[0.99]',
+      outline: 'border border-slate-200 bg-white text-[#0B2A3C] hover:bg-[#F4FBFA] hover:border-[#076E73]/40 shadow-2xs',
+      secondary: 'bg-slate-100 text-[#0B2A3C] hover:bg-slate-200/80',
+      ghost: 'hover:bg-slate-100 hover:text-[#0B2A3C]',
+      link: 'text-[#076E73] underline-offset-4 hover:underline p-0 h-auto',
     }
 
     const sizes = {
@@ -27,7 +27,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       <button
         ref={ref}
         className={cn(
-          'inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0B2545]/20 disabled:pointer-events-none disabled:opacity-50 cursor-pointer',
+          'inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0B2A3C]/20 disabled:pointer-events-none disabled:opacity-50 cursor-pointer',
           variants[variant],
           sizes[size],
           className

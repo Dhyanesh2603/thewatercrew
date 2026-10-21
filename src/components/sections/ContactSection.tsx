@@ -40,7 +40,7 @@ export const ContactSection: React.FC = () => {
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
           <Badge variant="outline" className="mb-3 text-xs font-semibold text-slate-700 bg-white">
-            <Mail className="w-3.5 h-3.5 text-[#0B2545] mr-1.5" />
+            <Mail className="w-3.5 h-3.5 text-[#076E73] mr-1.5" />
             ACADEMIC & INDUSTRY INQUIRIES
           </Badge>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
@@ -62,7 +62,7 @@ export const ContactSection: React.FC = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   className="text-center py-12 space-y-4"
                 >
-                  <div className="w-16 h-16 rounded-full bg-slate-100 border border-slate-200 text-[#0B2545] flex items-center justify-center mx-auto">
+                  <div className="w-16 h-16 rounded-full bg-slate-100 border border-slate-200 text-[#076E73] flex items-center justify-center mx-auto">
                     <CheckCircle2 className="w-9 h-9" />
                   </div>
                   <h3 className="text-2xl font-bold text-slate-900">Communication Dispatched</h3>
@@ -73,7 +73,7 @@ export const ContactSection: React.FC = () => {
                     <Button
                       type="button"
                       onClick={handleReset}
-                      className="bg-[#0B2545] hover:bg-[#133E87] text-white"
+                      className="bg-[#0B2A3C] hover:bg-[#076E73] text-white"
                     >
                       Send Another Message
                     </Button>
@@ -92,7 +92,7 @@ export const ContactSection: React.FC = () => {
                         placeholder="Dr. / Prof. / Eng. First Last"
                         value={formData.fullName}
                         onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                        className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0B2545]/20 focus:border-[#0B2545] transition-all"
+                        className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0B2A3C]/20 focus:border-[#0B2A3C] transition-all"
                       />
                     </div>
 
@@ -106,7 +106,7 @@ export const ContactSection: React.FC = () => {
                         placeholder="name@organization.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0B2545]/20 focus:border-[#0B2545] transition-all"
+                        className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0B2A3C]/20 focus:border-[#0B2A3C] transition-all"
                       />
                     </div>
                   </div>
@@ -121,7 +121,7 @@ export const ContactSection: React.FC = () => {
                         placeholder="e.g. Coast Guard / Port Authority / Lab"
                         value={formData.organization}
                         onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
-                        className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0B2545]/20 focus:border-[#0B2545] transition-all"
+                        className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0B2A3C]/20 focus:border-[#0B2A3C] transition-all"
                       />
                     </div>
 
@@ -137,7 +137,7 @@ export const ContactSection: React.FC = () => {
                             interest: e.target.value as ContactFormData['interest'],
                           })
                         }
-                        className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0B2545]/20 focus:border-[#0B2545] transition-all"
+                        className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0B2A3C]/20 focus:border-[#0B2A3C] transition-all"
                       >
                         <option value="Research Collaboration">Academic / Research Collaboration</option>
                         <option value="Prototype Inquiry">Prototype Benchmark & Field Trial Inquiry</option>
@@ -158,7 +158,7 @@ export const ContactSection: React.FC = () => {
                       placeholder="Outline your interest, required spill volume thresholds, wave conditions, or proposed collaboration timeline..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0B2545]/20 focus:border-[#0B2545] transition-all resize-none"
+                      className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0B2A3C]/20 focus:border-[#0B2A3C] transition-all resize-none"
                     />
                   </div>
 
@@ -169,7 +169,7 @@ export const ContactSection: React.FC = () => {
                     <Button
                       type="submit"
                       disabled={isSubmitting}
-                      className="bg-[#0B2545] hover:bg-[#133E87] text-white flex items-center gap-2"
+                      className="bg-[#0B2A3C] hover:bg-[#076E73] text-white flex items-center gap-2"
                     >
                       {isSubmitting ? 'Transmitting...' : 'Send Message'}
                       <Send className="w-3.5 h-3.5" />
@@ -189,7 +189,7 @@ export const ContactSection: React.FC = () => {
 
               <div className="space-y-4 text-xs text-slate-600">
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center shrink-0 text-[#0B2545]">
+                  <div className="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center shrink-0 text-[#076E73]">
                     <Building className="w-4 h-4" />
                   </div>
                   <div>
@@ -199,19 +199,19 @@ export const ContactSection: React.FC = () => {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center shrink-0 text-[#0B2545]">
+                  <div className="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center shrink-0 text-[#076E73]">
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>
                     <span className="font-semibold text-slate-900 block">Email Inquiries:</span>
-                    <a href={`mailto:${STARTUP_META.contactEmail}`} className="text-[#0B2545] hover:underline font-mono">
+                    <a href={`mailto:${STARTUP_META.contactEmail}`} className="text-[#076E73] hover:underline font-mono">
                       {STARTUP_META.contactEmail}
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center shrink-0 text-[#0B2545]">
+                  <div className="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center shrink-0 text-[#076E73]">
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>

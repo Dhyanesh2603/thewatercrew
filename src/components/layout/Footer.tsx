@@ -18,15 +18,16 @@ export const Footer: React.FC = () => {
           {/* Column 1 & 2: Startup Branding & Academic Affiliation */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl overflow-hidden flex items-center justify-center bg-[#0B2545] border border-slate-200 shadow-xs">
-                <img src="/logo.svg" alt="The Water Crew" className="w-full h-full object-cover" />
+              <div className="w-9 h-9 rounded-xl overflow-hidden flex items-center justify-center bg-transparent border border-slate-200/60 shadow-xs">
+                <img src="/logo.png" alt="The Water Crew" className="w-full h-full object-contain" />
               </div>
               <div className="flex flex-col">
-                <span className="text-base font-extrabold text-slate-900 tracking-tight">
-                  THE WATER CREW
+                <span className="text-base font-extrabold tracking-tight">
+                  <span className="text-[#0B2A3C]">thewater</span>
+                  <span className="text-[#076E73]">crew</span>
                 </span>
-                <span className="text-[10px] font-semibold text-[#0B2545] uppercase tracking-wider">
-                  Marine Clean-Tech Prototyping
+                <span className="text-[10px] font-semibold text-[#4A6670] uppercase tracking-wider">
+                  OCEAN OIL SPILL RECOVERY
                 </span>
               </div>
             </div>
@@ -37,11 +38,11 @@ export const Footer: React.FC = () => {
 
             <div className="flex items-center gap-3 pt-2">
               <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white border border-slate-200 text-[11px] text-slate-700 shadow-2xs font-medium">
-                <Waves className="w-3.5 h-3.5 text-[#0B2545]" />
+                <Waves className="w-3.5 h-3.5 text-[#076E73]" />
                 TRL 5 Physical Stage
               </span>
               <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white border border-slate-200 text-[11px] text-slate-700 shadow-2xs font-medium">
-                <ShieldCheck className="w-3.5 h-3.5 text-[#0B2545]" />
+                <ShieldCheck className="w-3.5 h-3.5 text-[#076E73]" />
                 VIT Incubated
               </span>
             </div>
@@ -57,7 +58,7 @@ export const Footer: React.FC = () => {
                 <li key={item.label}>
                   <a
                     href={item.href}
-                    className="hover:text-[#0B2545] transition-colors"
+                    className="hover:text-[#076E73] transition-colors"
                   >
                     {item.label}
                   </a>
@@ -73,27 +74,27 @@ export const Footer: React.FC = () => {
             </span>
             <ul className="space-y-2">
               <li>
-                <a href="#research" className="hover:text-[#0B2545] transition-colors">
+                <a href="#research" className="hover:text-[#076E73] transition-colors">
                   12m Wave Flume Facility
                 </a>
               </li>
               <li>
-                <a href="#research" className="hover:text-[#0B2545] transition-colors">
+                <a href="#research" className="hover:text-[#076E73] transition-colors">
                   CNC Polymer Milling
                 </a>
               </li>
               <li>
-                <a href="#project" className="hover:text-[#0B2545] transition-colors">
+                <a href="#project" className="hover:text-[#076E73] transition-colors">
                   Hydrodynamic CFD Models
                 </a>
               </li>
               <li>
-                <a href="#team" className="hover:text-[#0B2545] transition-colors">
+                <a href="#team" className="hover:text-[#076E73] transition-colors">
                   Core Engineering Team
                 </a>
               </li>
               <li>
-                <a href="#team" className="hover:text-[#0B2545] transition-colors">
+                <a href="#team" className="hover:text-[#076E73] transition-colors">
                   Faculty Leadership
                 </a>
               </li>
@@ -111,7 +112,7 @@ export const Footer: React.FC = () => {
             <div className="pt-1">
               <a
                 href={`mailto:${STARTUP_META.contactEmail}`}
-                className="text-[#0B2545] hover:underline font-mono text-xs block transition-colors font-medium"
+                className="text-[#076E73] hover:underline font-mono text-xs block transition-colors font-medium"
               >
                 {STARTUP_META.contactEmail}
               </a>

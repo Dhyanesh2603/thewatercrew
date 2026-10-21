@@ -11,7 +11,7 @@ export const Badge: React.FC<BadgeProps> = ({
   ...props
 }) => {
   const variants = {
-    default: 'border-transparent bg-[#0B2545] text-white',
+    default: 'border-transparent bg-[#0B2A3C] text-white',
     secondary: 'border-transparent bg-slate-100 text-slate-900',
     outline: 'text-slate-800 border-slate-200 bg-white',
     slate: 'bg-slate-50 text-slate-700 border-slate-200/80',

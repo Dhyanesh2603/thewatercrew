@@ -72,7 +72,7 @@ export const HeroSection: React.FC = () => {
               <Button
                 size="lg"
                 onClick={() => handleScrollTo('project')}
-                className="flex items-center justify-center gap-2 bg-[#0B2545] hover:bg-[#133E87] text-white px-6 shadow-xs w-full sm:w-auto"
+                className="flex items-center justify-center gap-2 bg-[#0B2A3C] hover:bg-[#076E73] text-white px-6 shadow-xs w-full sm:w-auto"
               >
                 Explore Project
                 <ArrowRight className="w-4 h-4" />
@@ -99,7 +99,7 @@ export const HeroSection: React.FC = () => {
                 <span className="text-[9px] sm:text-[10px] uppercase font-bold text-slate-400 tracking-wider block">
                   Recovery
                 </span>
-                <span className="text-base sm:text-xl font-mono font-bold text-[#0B2545] mt-0.5 block">
+                <span className="text-base sm:text-xl font-mono font-bold text-[#0B2A3C] mt-0.5 block">
                   94.2%
                 </span>
               </div>
@@ -145,7 +145,7 @@ export const HeroSection: React.FC = () => {
                 <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider text-slate-400 block">
                   Vessel Spec
                 </span>
-                <span className="text-[11px] sm:text-xs font-mono font-bold text-[#0B2545]">
+                <span className="text-[11px] sm:text-xs font-mono font-bold text-[#0B2A3C]">
                   MK-2 Catamaran
                 </span>
               </div>
@@ -163,7 +163,7 @@ export const HeroSection: React.FC = () => {
 
             {/* Asymmetric Offset Floating Accent Pill (Hidden on mobile, visible on sm+) */}
             <div className="hidden sm:flex absolute -bottom-5 -left-5 bg-white border border-slate-200 rounded-2xl p-4 shadow-lg items-center gap-3.5 z-20">
-              <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center font-mono font-bold text-sm text-[#0B2545]">
+              <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center font-mono font-bold text-sm text-[#0B2A3C]">
                 12m
               </div>
               <div className="text-left pr-2">

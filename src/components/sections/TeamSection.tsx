@@ -17,7 +17,7 @@ export const TeamSection: React.FC = () => {
         {/* Asymmetrical Section Header */}
         <div className="max-w-2xl mb-16">
           <Badge variant="outline" className="mb-3 text-xs font-semibold text-slate-700 bg-white">
-            <Users className="w-3.5 h-3.5 text-[#0B2545] mr-1.5" />
+            <Users className="w-3.5 h-3.5 text-[#076E73] mr-1.5" />
             CORE ENGINEERING TEAM
           </Badge>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.12]">
@@ -57,7 +57,7 @@ export const TeamSection: React.FC = () => {
                 {/* Details & Portfolio Redirect Link */}
                 <div className="space-y-4 flex-1">
                   <div>
-                    <span className="text-xs font-bold uppercase tracking-wider text-[#0B2545]">
+                    <span className="text-xs font-bold uppercase tracking-wider text-[#076E73]">
                       {leadMember.role}
                     </span>
                     <h3 className="text-2xl font-bold text-slate-900 mt-0.5">
@@ -78,7 +78,7 @@ export const TeamSection: React.FC = () => {
                       href={leadMember.portfolioUrl || 'https://vit.ac.in'}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 bg-white hover:bg-slate-50 border border-slate-200/90 text-xs font-bold text-[#0B2545] hover:text-[#133E87] rounded-xl shadow-2xs transition-colors"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-white hover:bg-slate-50 border border-slate-200/90 text-xs font-bold text-[#0B2A3C] hover:text-[#076E73] rounded-xl shadow-2xs transition-colors"
                     >
                       <span>View Faculty Portfolio</span>
                       <ExternalLink className="w-3.5 h-3.5" />
@@ -104,7 +104,7 @@ export const TeamSection: React.FC = () => {
                         href={leadMember.scholar}
                         target="_blank"
                         rel="noreferrer"
-                        className="w-8 h-8 rounded-lg bg-white border border-slate-200 hover:border-[#0B2545] hover:text-[#0B2545] text-slate-600 flex items-center justify-center transition-colors shadow-2xs"
+                        className="w-8 h-8 rounded-lg bg-white border border-slate-200 hover:border-[#0B2A3C] hover:text-[#0B2A3C] text-slate-600 flex items-center justify-center transition-colors shadow-2xs"
                         aria-label="Google Scholar"
                       >
                         <GraduationCap className="w-4 h-4" />
@@ -114,14 +114,14 @@ export const TeamSection: React.FC = () => {
                       href={leadMember.linkedin}
                       target="_blank"
                       rel="noreferrer"
-                      className="w-8 h-8 rounded-lg bg-white border border-slate-200 hover:border-[#0B2545] hover:text-[#0B2545] text-slate-600 flex items-center justify-center transition-colors shadow-2xs"
+                      className="w-8 h-8 rounded-lg bg-white border border-slate-200 hover:border-[#0B2A3C] hover:text-[#0B2A3C] text-slate-600 flex items-center justify-center transition-colors shadow-2xs"
                       aria-label="LinkedIn"
                     >
                       <LinkedInIcon className="w-3.5 h-3.5" />
                     </a>
                     <a
                       href={`mailto:${leadMember.email}`}
-                      className="w-8 h-8 rounded-lg bg-white border border-slate-200 hover:border-[#0B2545] hover:text-[#0B2545] text-slate-600 flex items-center justify-center transition-colors shadow-2xs"
+                      className="w-8 h-8 rounded-lg bg-white border border-slate-200 hover:border-[#0B2A3C] hover:text-[#0B2A3C] text-slate-600 flex items-center justify-center transition-colors shadow-2xs"
                       aria-label="Email"
                     >
                       <Mail className="w-4 h-4" />
@@ -159,7 +159,7 @@ export const TeamSection: React.FC = () => {
                           <h4 className="text-base font-bold text-slate-900 leading-snug">
                             {member.name}
                           </h4>
-                          <span className="text-xs font-semibold text-[#0B2545] block">
+                          <span className="text-xs font-semibold text-[#076E73] block">
                             {member.role}
                           </span>
                         </div>
@@ -168,13 +168,13 @@ export const TeamSection: React.FC = () => {
                             href={member.linkedin}
                             target="_blank"
                             rel="noreferrer"
-                            className="w-7 h-7 rounded-lg bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-600 hover:text-[#0B2545] flex items-center justify-center transition-colors"
+                            className="w-7 h-7 rounded-lg bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-600 hover:text-[#0B2A3C] flex items-center justify-center transition-colors"
                           >
                             <LinkedInIcon className="w-3 h-3" />
                           </a>
                           <a
                             href={`mailto:${member.email}`}
-                            className="w-7 h-7 rounded-lg bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-600 hover:text-[#0B2545] flex items-center justify-center transition-colors"
+                            className="w-7 h-7 rounded-lg bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-600 hover:text-[#0B2A3C] flex items-center justify-center transition-colors"
                           >
                             <Mail className="w-3 h-3" />
                           </a>

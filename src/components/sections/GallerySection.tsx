@@ -46,7 +46,7 @@ export const GallerySection: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
           <div className="max-w-2xl">
             <Badge variant="outline" className="mb-3 text-xs font-semibold text-slate-700 bg-white">
-              <ImageIcon className="w-3.5 h-3.5 text-[#0B2545] mr-1.5" />
+              <ImageIcon className="w-3.5 h-3.5 text-[#076E73] mr-1.5" />
               PHOTO ARCHIVE & FIELD BENCHMARKS
             </Badge>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.12]">
@@ -67,7 +67,7 @@ export const GallerySection: React.FC = () => {
                 className={cn(
                   'px-3 py-1.5 rounded-lg text-xs font-semibold transition-all duration-200 cursor-pointer',
                   activeCategory === cat
-                    ? 'bg-[#0B2545] text-white shadow-2xs'
+                    ? 'bg-[#0B2A3C] text-white shadow-2xs'
                     : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
                 )}
               >
@@ -182,7 +182,7 @@ export const GallerySection: React.FC = () => {
 
               <div className="p-6 sm:p-7 bg-white">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="px-2.5 py-0.5 rounded-md bg-slate-100 text-[#0B2545] text-xs font-mono font-semibold border border-slate-200">
+                  <span className="px-2.5 py-0.5 rounded-md bg-slate-100 text-[#076E73] text-xs font-mono font-semibold border border-slate-200">
                     {selectedItem.category} · {selectedItem.date}
                   </span>
                 </div>

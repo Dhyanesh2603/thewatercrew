@@ -16,7 +16,7 @@ export const ProjectTimelineSection: React.FC = () => {
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
           <Badge variant="outline" className="mb-3 text-xs font-semibold text-slate-700 bg-white">
-            <Clock className="w-3.5 h-3.5 text-[#0B2545] mr-1.5" />
+            <Clock className="w-3.5 h-3.5 text-[#076E73] mr-1.5" />
             DEVELOPMENT LIFECYCLE
           </Badge>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
@@ -64,7 +64,7 @@ export const ProjectTimelineSection: React.FC = () => {
                         className={cn(
                           'p-6 sm:p-7 transition-all duration-300 cursor-pointer text-left',
                           isSelected
-                            ? 'border-[#0B2545] shadow-md ring-1 ring-[#0B2545]/20'
+                            ? 'border-[#0B2A3C] shadow-md ring-1 ring-[#0B2A3C]/20'
                             : 'border-slate-200/80 shadow-2xs hover:border-slate-300 hover:shadow-sm'
                         )}
                       >
@@ -76,11 +76,11 @@ export const ProjectTimelineSection: React.FC = () => {
 
                           {stage.status === 'completed' && (
                             <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-700 bg-slate-100 px-2.5 py-0.5 rounded-full border border-slate-200">
-                              <CheckCircle2 className="w-3 h-3 text-[#0B2545]" /> Completed
+                              <CheckCircle2 className="w-3 h-3 text-[#076E73]" /> Completed
                             </span>
                           )}
                           {stage.status === 'in-progress' && (
-                            <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-[#0B2545] bg-slate-100 px-2.5 py-0.5 rounded-full border border-slate-200">
+                            <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-[#076E73] bg-slate-100 px-2.5 py-0.5 rounded-full border border-slate-200">
                               Current Phase
                             </span>
                           )}
@@ -106,7 +106,7 @@ export const ProjectTimelineSection: React.FC = () => {
                           </span>
                           {stage.engineeringDetails.map((detail) => (
                             <div key={detail} className="flex items-start gap-2 text-xs text-slate-700">
-                              <div className="w-1.5 h-1.5 rounded-full bg-[#0B2545] shrink-0 mt-1.5" />
+                              <div className="w-1.5 h-1.5 rounded-full bg-[#076E73] shrink-0 mt-1.5" />
                               <span className="leading-snug">{detail}</span>
                             </div>
                           ))}
@@ -116,7 +116,7 @@ export const ProjectTimelineSection: React.FC = () => {
                         {stage.metrics && (
                           <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
                             <span className="text-slate-500 font-medium">{stage.metrics.label}:</span>
-                            <span className="font-mono font-bold text-[#0B2545] bg-slate-50 px-2.5 py-1 rounded-md border border-slate-200">
+                            <span className="font-mono font-bold text-[#0B2A3C] bg-slate-50 px-2.5 py-1 rounded-md border border-slate-200">
                               {stage.metrics.value}
                             </span>
                           </div>
@@ -131,9 +131,9 @@ export const ProjectTimelineSection: React.FC = () => {
                       className={cn(
                         'w-9 h-9 rounded-full border flex items-center justify-center bg-white transition-all duration-300 z-10 shadow-2xs',
                         stage.status === 'completed'
-                          ? 'border-[#0B2545] text-[#0B2545]'
+                          ? 'border-[#0B2A3C] text-[#0B2A3C]'
                           : stage.status === 'in-progress'
-                          ? 'border-[#0B2545] text-[#0B2545] ring-2 ring-slate-200'
+                          ? 'border-[#0B2A3C] text-[#0B2A3C] ring-2 ring-slate-200'
                           : 'border-slate-300 text-slate-400'
                       )}
                     >

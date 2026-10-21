@@ -20,7 +20,7 @@ export const ProductsSection: React.FC = () => {
         {/* Asymmetrical Section Header */}
         <div className="max-w-2xl mb-16">
           <Badge variant="outline" className="mb-3 text-xs font-semibold text-slate-700 bg-white">
-            <Package className="w-3.5 h-3.5 text-[#0B2545] mr-1.5" />
+            <Package className="w-3.5 h-3.5 text-[#076E73] mr-1.5" />
             PROTOTYPE HARDWARE PORTFOLIO
           </Badge>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.12]">
@@ -55,7 +55,7 @@ export const ProductsSection: React.FC = () => {
                   </span>
                 </div>
                 <div className="absolute bottom-4 right-4">
-                  <span className="px-3 py-1 bg-white/95 backdrop-blur-md text-[11px] font-mono font-bold text-[#0B2545] rounded-lg shadow-xs">
+                  <span className="px-3 py-1 bg-white/95 backdrop-blur-md text-[11px] font-mono font-bold text-[#076E73] rounded-lg shadow-xs">
                     {flagshipProduct.status}
                   </span>
                 </div>
@@ -67,7 +67,7 @@ export const ProductsSection: React.FC = () => {
                   <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
                     {flagshipProduct.name}
                   </h3>
-                  <span className="text-sm font-semibold text-[#0B2545] block mt-0.5">
+                  <span className="text-sm font-semibold text-[#076E73] block mt-0.5">
                     {flagshipProduct.tagline}
                   </span>
                   <p className="text-sm text-slate-600 mt-3 leading-relaxed">
@@ -85,7 +85,7 @@ export const ProductsSection: React.FC = () => {
                       <span className="text-[10px] text-slate-400 uppercase font-semibold block">
                         {metric.label}
                       </span>
-                      <span className="text-base font-mono font-bold text-[#0B2545] mt-0.5 block">
+                      <span className="text-base font-mono font-bold text-[#0B2A3C] mt-0.5 block">
                         {metric.value}
                       </span>
                     </div>
@@ -100,7 +100,7 @@ export const ProductsSection: React.FC = () => {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-700">
                     {flagshipProduct.features.map((feat) => (
                       <div key={feat} className="flex items-start gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#0B2545] mt-1.5 shrink-0" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#076E73] mt-1.5 shrink-0" />
                         <span className="leading-snug">{feat}</span>
                       </div>
                     ))}
@@ -111,7 +111,7 @@ export const ProductsSection: React.FC = () => {
                 <div className="pt-2">
                   <Button
                     onClick={() => setActiveModalProduct(flagshipProduct)}
-                    className="w-full sm:w-auto px-6 bg-[#0B2545] hover:bg-[#133E87] text-white flex items-center gap-2"
+                    className="w-full sm:w-auto px-6 bg-[#0B2A3C] hover:bg-[#076E73] text-white flex items-center gap-2"
                   >
                     <span>Inspect Laboratory Specifications</span>
                     <ArrowRight className="w-4 h-4" />
@@ -150,7 +150,7 @@ export const ProductsSection: React.FC = () => {
                       <h4 className="text-lg font-bold text-slate-900 tracking-tight">
                         {product.name}
                       </h4>
-                      <span className="text-xs font-semibold text-[#0B2545] block mt-0.5">
+                      <span className="text-xs font-semibold text-[#076E73] block mt-0.5">
                         {product.tagline}
                       </span>
                       <p className="text-xs text-slate-600 mt-2 line-clamp-2 leading-relaxed">
@@ -162,7 +162,7 @@ export const ProductsSection: React.FC = () => {
                       {product.keyMetrics.slice(0, 2).map((m) => (
                         <div key={m.label} className="bg-slate-50 p-2 rounded-lg border border-slate-200/70">
                           <span className="text-[9px] uppercase font-bold text-slate-400 block">{m.label}</span>
-                          <span className="text-xs font-mono font-bold text-[#0B2545]">{m.value}</span>
+                          <span className="text-xs font-mono font-bold text-[#0B2A3C]">{m.value}</span>
                         </div>
                       ))}
                     </div>
@@ -212,7 +212,7 @@ export const ProductsSection: React.FC = () => {
               {/* Header */}
               <div className="px-6 py-5 bg-slate-50 border-b border-slate-200 flex items-center justify-between sticky top-0 bg-white/95 backdrop-blur-md z-10">
                 <div>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#0B2545]">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#076E73]">
                     Engineering Specifications
                   </span>
                   <h3 id="product-modal-title" className="text-xl font-bold text-slate-900">
@@ -243,7 +243,7 @@ export const ProductsSection: React.FC = () => {
                 {activeModalProduct.technicalDetails && (
                   <div className="bg-slate-50 rounded-xl p-5 border border-slate-200/80 space-y-3">
                     <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900 flex items-center gap-2">
-                      <Gauge className="w-4 h-4 text-[#0B2545]" />
+                      <Gauge className="w-4 h-4 text-[#076E73]" />
                       Laboratory Benchmark Data
                     </h4>
 
@@ -295,7 +295,7 @@ export const ProductsSection: React.FC = () => {
                   <ul className="space-y-2">
                     {activeModalProduct.features.map((feat) => (
                       <li key={feat} className="text-xs sm:text-sm text-slate-700 flex items-start gap-2.5">
-                        <ShieldCheck className="w-4 h-4 text-[#0B2545] mt-0.5 shrink-0" />
+                        <ShieldCheck className="w-4 h-4 text-[#076E73] mt-0.5 shrink-0" />
                         <span className="leading-snug">{feat}</span>
                       </li>
                     ))}
@@ -310,7 +310,7 @@ export const ProductsSection: React.FC = () => {
                 </span>
                 <Button
                   onClick={() => setActiveModalProduct(null)}
-                  className="w-full sm:w-auto bg-[#0B2545] hover:bg-[#133E87] text-white text-xs cursor-pointer"
+                  className="w-full sm:w-auto bg-[#0B2A3C] hover:bg-[#076E73] text-white text-xs cursor-pointer"
                 >
                   Close Specification
                 </Button>
