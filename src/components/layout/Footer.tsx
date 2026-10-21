@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
                 <img src="/logo.png" alt="The Water Crew" className="w-full h-full object-contain" />
               </div>
               <div className="flex flex-col">
-                <span className="text-base font-extrabold tracking-tight">
+                <span className="text-base font-extrabold tracking-tight oil-spill-hover">
                   <span className="text-[#0B2A3C]">thewater</span>
                   <span className="text-[#076E73]">crew</span>
                 </span>

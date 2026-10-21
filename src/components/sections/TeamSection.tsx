@@ -6,6 +6,7 @@ import { easeEngineering } from '@/animations/motionVariants'
 import { LinkedInIcon } from '@/components/ui/Icons'
 import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
+import { OilSpillText } from '@/components/ui/OilSpillText'
 
 export const TeamSection: React.FC = () => {
   const leadMember = TEAM_MEMBERS[0] // Dr. J Ranjitha
@@ -20,9 +21,9 @@ export const TeamSection: React.FC = () => {
             <Users className="w-3.5 h-3.5 text-[#076E73] mr-1.5" />
             CORE ENGINEERING TEAM
           </Badge>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.12]">
+          <OilSpillText as="h2" className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.12]">
             Multidisciplinary Engineering & Systems Design
-          </h2>
+          </OilSpillText>
           <p className="mt-4 text-base text-slate-600 leading-relaxed max-w-xl">
             Our student-led engineering team combines academic hydrodynamics expertise, embedded systems architecture, and precision mechanical fabrication to bring the oil skimmer from lab theory to sea reality.
           </p>

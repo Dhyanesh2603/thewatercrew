@@ -7,6 +7,7 @@ import { easeEngineering } from '@/animations/motionVariants'
 import { Badge } from '@/components/ui/badge'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
+import { OilSpillText } from '@/components/ui/OilSpillText'
 
 export const ProductsSection: React.FC = () => {
   const [activeModalProduct, setActiveModalProduct] = useState<ProductSpec | null>(null)
@@ -23,9 +24,9 @@ export const ProductsSection: React.FC = () => {
             <Package className="w-3.5 h-3.5 text-[#076E73] mr-1.5" />
             PROTOTYPE HARDWARE PORTFOLIO
           </Badge>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.12]">
+          <OilSpillText as="h2" className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.12]">
             Engineered Hardware for Turbulent Marine Environments
-          </h2>
+          </OilSpillText>
           <p className="mt-4 text-base text-slate-600 leading-relaxed max-w-xl">
             Our modular hardware architecture encompasses recovery skimmers, active containment barriers, and sensor telemetry arrays—designed for plug-and-play integration on harbor and offshore vessels.
           </p>

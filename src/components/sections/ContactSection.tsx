@@ -6,6 +6,7 @@ import type { ContactFormData } from '@/types'
 import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { OilSpillText } from '@/components/ui/OilSpillText'
 
 const initialForm: ContactFormData = {
   fullName: '',
@@ -43,9 +44,9 @@ export const ContactSection: React.FC = () => {
             <Mail className="w-3.5 h-3.5 text-[#076E73] mr-1.5" />
             ACADEMIC & INDUSTRY INQUIRIES
           </Badge>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+          <OilSpillText as="h2" className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
             Initiate Collaboration or Request Prototype Data
-          </h2>
+          </OilSpillText>
           <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
             Whether you represent a port authority, marine response fleet, university lab, or research granting institution, our engineering team welcomes technical inquiries.
           </p>

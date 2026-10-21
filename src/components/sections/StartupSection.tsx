@@ -5,6 +5,7 @@ import { ABOUT_STARTUP_CONTENT, STARTUP_META } from '@/constants/projectData'
 import { fadeInUp, easeEngineering } from '@/animations/motionVariants'
 import { Card, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
+import { OilSpillText } from '@/components/ui/OilSpillText'
 
 export const StartupSection: React.FC = () => {
   return (
@@ -15,9 +16,9 @@ export const StartupSection: React.FC = () => {
           <Badge variant="outline" className="mb-3 text-xs font-semibold text-slate-700 bg-white">
             FOUNDATION & DIRECTIVES
           </Badge>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.12]">
+          <OilSpillText as="h2" className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.12]">
             Bridging Laboratory Science and Real-World Ocean Protection
-          </h2>
+          </OilSpillText>
           <p className="mt-4 text-base text-slate-600 leading-relaxed max-w-xl">
             Originating from research laboratories at {STARTUP_META.institution}, The Water Crew develops autonomous hardware systems engineered to recover maritime hydrocarbon spills at the boundary layer before irreversible coastal damage occurs.
           </p>

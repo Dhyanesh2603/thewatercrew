@@ -87,7 +87,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInternship }) => {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-base sm:text-lg font-extrabold tracking-tight">
+                <span className="text-base sm:text-lg font-extrabold tracking-tight oil-spill-hover">
                   <span className="text-[#0B2A3C]">thewater</span>
                   <span className="text-[#076E73]">crew</span>
                 </span>

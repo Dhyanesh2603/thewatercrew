@@ -5,6 +5,7 @@ import { GALLERY_ITEMS } from '@/constants/projectData'
 import type { GalleryItem } from '@/types'
 import { easeEngineering } from '@/animations/motionVariants'
 import { Badge } from '@/components/ui/badge'
+import { OilSpillText } from '@/components/ui/OilSpillText'
 import { cn } from '@/utils/cn'
 
 type CategoryFilter = 'All' | 'Laboratory' | 'Workshop' | 'Prototype' | 'Field Testing'
@@ -49,9 +50,9 @@ export const GallerySection: React.FC = () => {
               <ImageIcon className="w-3.5 h-3.5 text-[#076E73] mr-1.5" />
               PHOTO ARCHIVE & FIELD BENCHMARKS
             </Badge>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.12]">
+            <OilSpillText as="h2" className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.12]">
               Experimental Rigs & Prototype Manufacturing
-            </h2>
+            </OilSpillText>
             <p className="mt-3 text-base text-slate-600 max-w-xl">
               Photographic documentation of our physical testing, water flume benchmarks, CNC composite milling, and prototype assembly at VIT.
             </p>

@@ -5,6 +5,7 @@ import { STARTUP_META } from '@/constants/projectData'
 import { easeEngineering } from '@/animations/motionVariants'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
+import { OilSpillText } from '@/components/ui/OilSpillText'
 
 export const HeroSection: React.FC = () => {
   const handleScrollTo = (targetId: string) => {
@@ -47,9 +48,9 @@ export const HeroSection: React.FC = () => {
               transition={{ duration: 0.7, delay: 0.08, ease: easeEngineering }}
               className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.12] text-slate-900 break-words"
             >
-              <span className="oil-spill-text block">
+              <OilSpillText className="block">
                 Engineering the Future of Oil Spill Recovery
-              </span>
+              </OilSpillText>
             </motion.h1>
 
             {/* Tightly Constrained Text - Doesn't flow across the whole page */}

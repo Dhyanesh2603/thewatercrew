@@ -5,6 +5,7 @@ import { TIMELINE_STAGES } from '@/constants/projectData'
 import { easeEngineering } from '@/animations/motionVariants'
 import { Badge } from '@/components/ui/badge'
 import { Card } from '@/components/ui/card'
+import { OilSpillText } from '@/components/ui/OilSpillText'
 import { cn } from '@/utils/cn'
 
 export const ProjectTimelineSection: React.FC = () => {
@@ -19,9 +20,9 @@ export const ProjectTimelineSection: React.FC = () => {
             <Clock className="w-3.5 h-3.5 text-[#076E73] mr-1.5" />
             DEVELOPMENT LIFECYCLE
           </Badge>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+          <OilSpillText as="h2" className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
             From Mathematical Fluidics to Field-Deployable Autonomous Hardware
-          </h2>
+          </OilSpillText>
           <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
             The Water Crew follows a rigorous aerospace-grade Stage-Gate engineering methodology. Each phase requires empirical physical validation before moving to the next Technology Readiness Level (TRL).
           </p>
