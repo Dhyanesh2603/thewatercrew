@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { GitCommit, Clock, CheckCircle2, AlertCircle, ArrowRight, Activity, Terminal } from 'lucide-react'
+import { motion } from 'framer-motion'
+import { GitCommit, Clock, CheckCircle2, Activity } from 'lucide-react'
 import { TIMELINE_STAGES } from '@/constants/projectData'
 import { easeEngineering } from '@/animations/motionVariants'
 import { cn } from '@/utils/cn'

@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Target, Compass, Sparkles, Wrench, Shield, Layers, ArrowUpRight } from 'lucide-react'
+import { Target, Compass, Sparkles, Wrench, Layers, ArrowUpRight } from 'lucide-react'
 import { ABOUT_STARTUP_CONTENT, STARTUP_META } from '@/constants/projectData'
 import { fadeInUp, easeEngineering } from '@/animations/motionVariants'
 
@@ -94,7 +94,7 @@ export const StartupSection: React.FC = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: '-60px' }}
-                customDelay={0.1}
+                custom={0.1}
                 className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow"
               >
                 <div className="w-10 h-10 rounded-xl bg-sky-50 border border-sky-100 flex items-center justify-center text-[#0B2545] mb-4">
@@ -112,7 +112,7 @@ export const StartupSection: React.FC = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: '-60px' }}
-                customDelay={0.2}
+                custom={0.2}
                 className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow"
               >
                 <div className="w-10 h-10 rounded-xl bg-teal-50 border border-teal-100 flex items-center justify-center text-[#0D9488] mb-4">

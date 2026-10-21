@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Send, CheckCircle2, Building, MessageSquare, Compass } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, CheckCircle2, Building, Compass } from 'lucide-react'
 import { STARTUP_META } from '@/constants/projectData'
 import type { ContactFormData } from '@/types'
-import { easeEngineering } from '@/animations/motionVariants'
 
 const initialForm: ContactFormData = {
   fullName: '',

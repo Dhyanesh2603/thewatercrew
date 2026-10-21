@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowUp, Mail, Linkedin, Github, GraduationCap, ShieldCheck, Waves } from 'lucide-react'
+import { ArrowUp, ShieldCheck, Waves } from 'lucide-react'
 import { STARTUP_META } from '@/constants/projectData'
 import { NAV_ITEMS } from '@/constants/navigation'
 

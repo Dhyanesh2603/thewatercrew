@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Package, ArrowRight, X, Cpu, ShieldCheck, Activity, Gauge, Battery, Wrench } from 'lucide-react'
+import { Package, ArrowRight, X, ShieldCheck, Gauge } from 'lucide-react'
 import { PRODUCTS_LIST } from '@/constants/projectData'
 import type { ProductSpec } from '@/types'
 import { easeEngineering } from '@/animations/motionVariants'

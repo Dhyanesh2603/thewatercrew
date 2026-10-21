@@ -1,8 +1,9 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Users, Mail, Linkedin, GraduationCap, ArrowUpRight } from 'lucide-react'
+import { Users, Mail, GraduationCap } from 'lucide-react'
 import { TEAM_MEMBERS } from '@/constants/projectData'
-import { fadeInUp, easeEngineering } from '@/animations/motionVariants'
+import { easeEngineering } from '@/animations/motionVariants'
+import { LinkedInIcon } from '@/components/ui/Icons'
 
 export const TeamSection: React.FC = () => {
   return (
@@ -103,7 +104,7 @@ export const TeamSection: React.FC = () => {
                     className="w-8 h-8 rounded-lg bg-white border border-slate-200 hover:border-[#0B2545] hover:text-[#0B2545] text-slate-600 flex items-center justify-center transition-colors shadow-2xs"
                     aria-label={`${member.name} LinkedIn`}
                   >
-                    <Linkedin className="w-4 h-4" />
+                    <LinkedInIcon className="w-3.5 h-3.5" />
                   </a>
 
                   <a

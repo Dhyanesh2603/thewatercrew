@@ -1,8 +1,7 @@
 import React from 'react'
-import { motion } from 'framer-motion'
-import { Mail, Linkedin, GraduationCap, Quote, BookOpen, ExternalLink, Award, Sparkles } from 'lucide-react'
+import { Mail, Quote, ExternalLink, Award } from 'lucide-react'
 import { RESEARCH_LEAD_DATA } from '@/constants/projectData'
-import { easeEngineering } from '@/animations/motionVariants'
+import { LinkedInIcon, GoogleScholarIcon } from '@/components/ui/Icons'
 
 export const ResearchLeadSection: React.FC = () => {
   return (
@@ -54,7 +53,7 @@ export const ResearchLeadSection: React.FC = () => {
                   className="w-full px-4 py-2.5 bg-white border border-slate-200 hover:border-[#0B2545] rounded-xl text-xs font-semibold text-slate-800 hover:text-[#0B2545] transition-all flex items-center justify-between shadow-xs group"
                 >
                   <span className="flex items-center gap-2">
-                    <BookOpen className="w-4 h-4 text-[#0B2545]" />
+                    <GoogleScholarIcon className="w-4 h-4 text-[#0B2545]" />
                     Google Scholar Profile
                   </span>
                   <ExternalLink className="w-3.5 h-3.5 text-slate-400 group-hover:text-[#0B2545] transition-colors" />
@@ -67,7 +66,7 @@ export const ResearchLeadSection: React.FC = () => {
                     rel="noreferrer"
                     className="px-4 py-2.5 bg-white border border-slate-200 hover:border-[#0B2545] rounded-xl text-xs font-semibold text-slate-800 hover:text-[#0B2545] transition-all flex items-center justify-center gap-1.5 shadow-xs"
                   >
-                    <Linkedin className="w-3.5 h-3.5 text-[#0B2545]" />
+                    <LinkedInIcon className="w-3.5 h-3.5 text-[#0B2545]" />
                     LinkedIn
                   </a>
 

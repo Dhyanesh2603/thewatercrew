@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Image as ImageIcon, Maximize2, X, Filter } from 'lucide-react'
+import { Image as ImageIcon, Maximize2, X } from 'lucide-react'
 import { GALLERY_ITEMS } from '@/constants/projectData'
 import type { GalleryItem } from '@/types'
 import { easeEngineering } from '@/animations/motionVariants'

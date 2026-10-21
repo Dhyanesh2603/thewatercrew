@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Microscope, CheckCircle2, ChevronRight, Activity, Cpu, Wrench } from 'lucide-react'
+import { Microscope, CheckCircle2 } from 'lucide-react'
 import { RESEARCH_FACILITIES } from '@/constants/projectData'
 import { easeEngineering } from '@/animations/motionVariants'
 import { cn } from '@/utils/cn'
