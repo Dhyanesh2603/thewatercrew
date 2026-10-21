@@ -4,7 +4,6 @@ import { HeroSection } from '@/components/sections/HeroSection'
 import { StartupSection } from '@/components/sections/StartupSection'
 import { ResearchSection } from '@/components/sections/ResearchSection'
 import { ProjectTimelineSection } from '@/components/sections/ProjectTimelineSection'
-import { ResearchLeadSection } from '@/components/sections/ResearchLeadSection'
 import { TeamSection } from '@/components/sections/TeamSection'
 import { ProductsSection } from '@/components/sections/ProductsSection'
 import { GallerySection } from '@/components/sections/GallerySection'
@@ -38,19 +37,16 @@ export const HomePage: React.FC = () => {
       {/* 4. Project Overview Timeline */}
       <ProjectTimelineSection />
 
-      {/* 5. Research Lead Profile */}
-      <ResearchLeadSection />
-
-      {/* 6. Core Team */}
+      {/* 5. Core Engineering Team (Includes Faculty Lead with Portfolio Link) */}
       <TeamSection />
 
-      {/* 7. Products & Prototypes */}
+      {/* 6. Products & Prototypes */}
       <ProductsSection />
 
-      {/* 8. Gallery Masonry */}
+      {/* 7. Gallery Masonry */}
       <GallerySection />
 
-      {/* 9. Contact & Map */}
+      {/* 8. Contact */}
       <ContactSection />
     </main>
   )

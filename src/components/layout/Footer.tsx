@@ -25,7 +25,7 @@ export const Footer: React.FC = () => {
                 <span className="text-base font-extrabold text-slate-900 tracking-tight">
                   THE WATER CREW
                 </span>
-                <span className="text-[10px] font-semibold text-[#0D9488] uppercase tracking-wider">
+                <span className="text-[10px] font-semibold text-[#0B2545] uppercase tracking-wider">
                   Marine Clean-Tech Prototyping
                 </span>
               </div>
@@ -41,7 +41,7 @@ export const Footer: React.FC = () => {
                 TRL 5 Physical Stage
               </span>
               <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white border border-slate-200 text-[11px] text-slate-700 shadow-2xs font-medium">
-                <ShieldCheck className="w-3.5 h-3.5 text-[#0D9488]" />
+                <ShieldCheck className="w-3.5 h-3.5 text-[#0B2545]" />
                 VIT Incubated
               </span>
             </div>
@@ -88,13 +88,13 @@ export const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a href="#lead" className="hover:text-[#0B2545] transition-colors">
-                  Faculty Publications
+                <a href="#team" className="hover:text-[#0B2545] transition-colors">
+                  Core Engineering Team
                 </a>
               </li>
               <li>
-                <a href="#lead" className="hover:text-[#0B2545] transition-colors">
-                  Google Scholar Citations
+                <a href="#team" className="hover:text-[#0B2545] transition-colors">
+                  Faculty Leadership
                 </a>
               </li>
             </ul>
@@ -128,7 +128,7 @@ export const Footer: React.FC = () => {
           <button
             type="button"
             onClick={handleScrollToTop}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white hover:bg-slate-100 border border-slate-200 text-slate-700 hover:text-slate-950 transition-colors text-xs shadow-2xs font-medium"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white hover:bg-slate-100 border border-slate-200 text-slate-700 hover:text-slate-950 transition-colors text-xs shadow-2xs font-medium cursor-pointer"
             aria-label="Back to top"
           >
             <span>Top</span>

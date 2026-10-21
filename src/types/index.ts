@@ -49,6 +49,7 @@ export interface TeamMember {
   email: string
   linkedin: string
   scholar?: string
+  portfolioUrl?: string
 }
 
 export interface ProductSpec {

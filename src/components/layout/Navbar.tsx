@@ -23,7 +23,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInternship }) => {
       }
 
       // Update active hash based on scroll position
-      const sections = ['contact', 'gallery', 'products', 'team', 'lead', 'project', 'research', 'about', 'hero']
+      const sections = ['contact', 'gallery', 'products', 'team', 'project', 'research', 'about', 'hero']
       for (const section of sections) {
         const el = document.getElementById(section)
         if (el) {

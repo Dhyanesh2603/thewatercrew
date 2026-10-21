@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { Microscope, CheckCircle2 } from 'lucide-react'
 import { RESEARCH_FACILITIES } from '@/constants/projectData'
 import { easeEngineering } from '@/animations/motionVariants'
+import { Badge } from '@/components/ui/badge'
 import { cn } from '@/utils/cn'
 
 export const ResearchSection: React.FC = () => {
@@ -11,10 +12,10 @@ export const ResearchSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-20">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200/90 text-xs font-semibold text-slate-700 tracking-wide mb-3">
-            <Microscope className="w-3.5 h-3.5 text-[#0B2545]" />
+          <Badge variant="outline" className="mb-3 text-xs font-semibold text-slate-700 bg-white">
+            <Microscope className="w-3.5 h-3.5 text-[#0B2545] mr-1.5" />
             FACILITIES & EXPERIMENTAL RIGS
-          </div>
+          </Badge>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
             State-of-the-Art Research Rigs & Prototyping Infrastructure
           </h2>
@@ -82,7 +83,7 @@ export const ResearchSection: React.FC = () => {
                   )}
                 >
                   <div className="inline-block">
-                    <span className="text-xs font-bold uppercase tracking-wider text-[#0D9488]">
+                    <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
                       {facility.subtitle}
                     </span>
                     <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">
@@ -109,12 +110,9 @@ export const ResearchSection: React.FC = () => {
                     </ul>
                   </div>
 
-                  {/* Micro Lab Status */}
+                  {/* Lab Status (No green dot, no active tag) */}
                   <div className="pt-4 border-t border-slate-100 flex items-center gap-4 text-xs text-slate-500">
-                    <span className="flex items-center gap-1.5">
-                      <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                      Active Lab Operations
-                    </span>
+                    <span>Verified Flume Testing Protocols</span>
                     <span>·</span>
                     <span>Safety Certified</span>
                   </div>

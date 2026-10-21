@@ -14,7 +14,7 @@ export const STARTUP_META = {
   institution: 'Vellore Institute of Technology (VIT)',
   laboratory: 'Center for Multiphase Fluid Mechanics & Marine Remediation',
   stage: 'Prototype Phase (TRL 5)',
-  statusBadge: 'Active Research & Prototype Development',
+  statusBadge: 'Research & Prototype Development',
   foundedYear: '2025',
   contactEmail: 'thewatercrew.vit@gmail.com',
   location: 'Technology Tower, VIT Vellore Campus, Tamil Nadu, India',
@@ -29,7 +29,7 @@ export const HERO_FLOATING_CARD = {
     { label: 'Oil Recovery Efficiency', value: '94.2%' },
     { label: 'Throughput Capacity', value: '1,800 L/hr' },
     { label: 'Viscosity Tolerance', value: 'Up to 50,000 cSt' },
-    { label: 'Subsystem Status', value: 'Active Telemetry' },
+    { label: 'Subsystem Status', value: 'Telemetry Node' },
   ],
 }
 
@@ -226,8 +226,8 @@ export const RESEARCH_LEAD_DATA = {
   title: 'Research Lead & Academic Advisor',
   institution: 'Vellore Institute of Technology (VIT)',
   department: 'School of Mechanical Engineering / Fluid Mechanics Laboratory',
-  image:
-    'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80',
+  image: '/avatar-placeholder.png',
+  portfolioUrl: 'https://vit.ac.in',
   quote:
     'True environmental resilience requires moving beyond theoretical fluid dynamics into high-performance, real-world mechanical intervention. Our prototype is engineered to turn academic research into tangible ocean protection.',
   bio:
@@ -242,6 +242,7 @@ export const RESEARCH_LEAD_DATA = {
     scholar: 'https://scholar.google.com',
     linkedin: 'https://linkedin.com',
     email: 'jranjitha@vit.ac.in',
+    portfolio: 'https://vit.ac.in',
   },
   researchFocus: [
     'Multiphase Interfacial Dynamics & Capillarity',
@@ -259,11 +260,11 @@ export const TEAM_MEMBERS: TeamMember[] = [
     department: 'School of Mechanical Engineering, VIT',
     bio: 'Guiding theoretical hydrodynamics, interfacial surface characterization, and academic research rigor for the marine skimmer prototype.',
     specialties: ['Fluid Mechanics', 'Multiphase Flows', 'Academic Governance'],
-    image:
-      'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80',
+    image: '/avatar-placeholder.png',
     email: 'jranjitha@vit.ac.in',
     linkedin: 'https://linkedin.com',
     scholar: 'https://scholar.google.com',
+    portfolioUrl: 'https://vit.ac.in',
   },
   {
     id: 'team-software-lead',
@@ -272,8 +273,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     department: 'Autonomous Systems & Embedded Edge Computing',
     bio: 'Architecting the embedded telemetry firmware, real-time wave compensation algorithms, responsive telemetry UI, and mission coordination stack.',
     specialties: ['Embedded C/C++', 'React Architecture', 'Edge Telemetry', 'RTOS'],
-    image:
-      'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80',
+    image: '/avatar-placeholder.png',
     email: 'software.thewatercrew@gmail.com',
     linkedin: 'https://linkedin.com',
   },
@@ -284,8 +284,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     department: 'Marine Mechanical & Fluid Dynamics',
     bio: 'Leading structural chassis finite element analysis, 5-axis CNC manufacturing of oleophilic drums, and fluid intake weir geometry optimization.',
     specialties: ['CAD/FEA (SolidWorks)', 'CFD (ANSYS)', 'Marine Metallurgy', 'Rapid Prototyping'],
-    image:
-      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80',
+    image: '/avatar-placeholder.png',
     email: 'mechanical.thewatercrew@gmail.com',
     linkedin: 'https://linkedin.com',
   },
@@ -296,7 +295,7 @@ export const PRODUCTS_LIST: ProductSpec[] = [
     id: 'skimmer-alpha',
     name: 'The Skimmer MK-2',
     tagline: 'Autonomous High-Recovery Oleophilic Disc Skimmer',
-    status: 'In Laboratory Validation',
+    status: 'Laboratory Validation',
     category: 'Autonomous Surface Vessel',
     description:
       'Our flagship deep-tech recovery unit engineered with a dual-axis grooved composite drum array. Achieves up to 94.2% oil recovery efficiency with minimal water uptake across turbulent maritime wave conditions.',
