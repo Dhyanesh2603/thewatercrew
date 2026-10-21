@@ -4,123 +4,186 @@ import { Package, ArrowRight, X, ShieldCheck, Gauge } from 'lucide-react'
 import { PRODUCTS_LIST } from '@/constants/projectData'
 import type { ProductSpec } from '@/types'
 import { easeEngineering } from '@/animations/motionVariants'
+import { Badge } from '@/components/ui/badge'
+import { Card } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
 
 export const ProductsSection: React.FC = () => {
   const [activeModalProduct, setActiveModalProduct] = useState<ProductSpec | null>(null)
 
+  const flagshipProduct = PRODUCTS_LIST[0] // The Skimmer MK-2
+  const complementaryHardware = PRODUCTS_LIST.slice(1) // Boom & Telemetry Buoy
+
   return (
-    <section id="products" className="py-24 sm:py-32 bg-white relative overflow-hidden border-t border-b border-slate-200/80">
+    <section id="products" className="py-24 sm:py-32 bg-[#FAFBFC] relative overflow-hidden border-t border-b border-slate-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="max-w-3xl mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200/90 text-xs font-semibold text-slate-700 tracking-wide mb-3">
-            <Package className="w-3.5 h-3.5 text-[#0B2545]" />
+        {/* Asymmetrical Section Header */}
+        <div className="max-w-2xl mb-16">
+          <Badge variant="outline" className="mb-3 text-xs font-semibold text-slate-700 bg-white">
+            <Package className="w-3.5 h-3.5 text-[#0B2545] mr-1.5" />
             PROTOTYPE HARDWARE PORTFOLIO
-          </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+          </Badge>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.12]">
             Engineered Hardware for Turbulent Marine Environments
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
+          <p className="mt-4 text-base text-slate-600 leading-relaxed max-w-xl">
             Our modular hardware architecture encompasses recovery skimmers, active containment barriers, and sensor telemetry arrays—designed for plug-and-play integration on harbor and offshore vessels.
           </p>
         </div>
 
-        {/* Product Cards Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {PRODUCTS_LIST.map((product, idx) => (
-            <motion.div
-              key={product.id}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 0.6, delay: idx * 0.1, ease: easeEngineering }}
-              className="bg-[#FAFBFC] rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-slate-300 transition-all duration-300 overflow-hidden flex flex-col justify-between group"
-            >
-              <div>
-                {/* Product Image */}
-                <div className="relative aspect-[16/10] bg-slate-100 overflow-hidden">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
+        {/* Asymmetrical Hardware Showcase: 7-Column Flagship Spotlight + 5-Column Stack */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          {/* Flagship Skimmer MK-2 (7 Columns Wide Feature) */}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 0.6, ease: easeEngineering }}
+            className="lg:col-span-7"
+          >
+            <Card className="overflow-hidden bg-white hover:shadow-lg transition-all duration-300">
+              {/* Large Cover Photo */}
+              <div className="relative aspect-[16/10] bg-slate-100 overflow-hidden">
+                <img
+                  src={flagshipProduct.image}
+                  alt={flagshipProduct.name}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-104"
+                />
+                <div className="absolute top-4 left-4">
+                  <span className="px-3 py-1 bg-white/95 backdrop-blur-md text-xs font-bold text-slate-900 rounded-lg shadow-xs">
+                    Flagship Surface Vessel
+                  </span>
+                </div>
+                <div className="absolute bottom-4 right-4">
+                  <span className="px-3 py-1 bg-white/95 backdrop-blur-md text-[11px] font-mono font-bold text-[#0B2545] rounded-lg shadow-xs">
+                    {flagshipProduct.status}
+                  </span>
+                </div>
+              </div>
 
-                  <div className="absolute top-3 left-3">
-                    <span className="px-2.5 py-1 bg-white/95 backdrop-blur-md text-xs font-bold text-slate-800 rounded-md shadow-xs">
-                      {product.category}
-                    </span>
-                  </div>
-
-                  <div className="absolute bottom-3 right-3">
-                    <span className="px-2.5 py-0.5 bg-white/95 backdrop-blur-md text-[10px] font-mono font-semibold text-[#0B2545] rounded-md border border-slate-200 shadow-2xs">
-                      {product.status}
-                    </span>
-                  </div>
+              {/* Content */}
+              <div className="p-7 sm:p-9 space-y-6">
+                <div>
+                  <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                    {flagshipProduct.name}
+                  </h3>
+                  <span className="text-sm font-semibold text-[#0B2545] block mt-0.5">
+                    {flagshipProduct.tagline}
+                  </span>
+                  <p className="text-sm text-slate-600 mt-3 leading-relaxed">
+                    {flagshipProduct.description}
+                  </p>
                 </div>
 
-                {/* Content */}
-                <div className="p-6 sm:p-7">
-                  <h3 className="text-xl font-bold text-slate-900 tracking-tight">
-                    {product.name}
-                  </h3>
-                  <p className="text-xs font-semibold text-[#0D9488] mt-1">
-                    {product.tagline}
-                  </p>
-                  <p className="text-xs sm:text-sm text-slate-600 mt-3 leading-relaxed">
-                    {product.description}
-                  </p>
+                {/* 4 Key Metrics */}
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+                  {flagshipProduct.keyMetrics.map((metric) => (
+                    <div
+                      key={metric.label}
+                      className="bg-slate-50 p-3 rounded-xl border border-slate-200/70"
+                    >
+                      <span className="text-[10px] text-slate-400 uppercase font-semibold block">
+                        {metric.label}
+                      </span>
+                      <span className="text-base font-mono font-bold text-[#0B2545] mt-0.5 block">
+                        {metric.value}
+                      </span>
+                    </div>
+                  ))}
+                </div>
 
-                  {/* Key Metrics 2x2 */}
-                  <div className="mt-5 grid grid-cols-2 gap-2.5">
-                    {product.keyMetrics.map((metric) => (
-                      <div
-                        key={metric.label}
-                        className="bg-white p-2.5 rounded-xl border border-slate-200/70 text-left shadow-2xs"
-                      >
-                        <span className="text-[10px] text-slate-400 uppercase font-semibold block">
-                          {metric.label}
-                        </span>
-                        <span className="text-xs sm:text-sm font-mono font-bold text-[#0B2545]">
-                          {metric.value}
-                        </span>
+                {/* Features List */}
+                <div className="pt-2 border-t border-slate-100">
+                  <span className="text-[10px] uppercase font-bold tracking-wider text-slate-400 block mb-2.5">
+                    Subsystem Architecture
+                  </span>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-700">
+                    {flagshipProduct.features.map((feat) => (
+                      <div key={feat} className="flex items-start gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#0B2545] mt-1.5 shrink-0" />
+                        <span className="leading-snug">{feat}</span>
                       </div>
                     ))}
                   </div>
+                </div>
 
-                  {/* Highlights */}
-                  <div className="mt-5 pt-4 border-t border-slate-200/60">
-                    <span className="text-[10px] uppercase font-bold tracking-wider text-slate-400 block mb-2">
-                      Engineering Features
-                    </span>
-                    <ul className="space-y-1.5">
-                      {product.features.slice(0, 3).map((feat) => (
-                        <li key={feat} className="text-xs text-slate-700 flex items-start gap-2">
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#0B2545] mt-1.5 shrink-0" />
-                          <span className="leading-snug">{feat}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                {/* Action Trigger */}
+                <div className="pt-2">
+                  <Button
+                    onClick={() => setActiveModalProduct(flagshipProduct)}
+                    className="w-full sm:w-auto px-6 bg-[#0B2545] hover:bg-[#133E87] text-white flex items-center gap-2"
+                  >
+                    <span>Inspect Laboratory Specifications</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </Button>
                 </div>
               </div>
+            </Card>
+          </motion.div>
 
-              {/* Action Button */}
-              <div className="p-6 pt-0">
-                <button
-                  type="button"
-                  onClick={() => setActiveModalProduct(product)}
-                  className="w-full py-2.5 px-4 bg-white hover:bg-slate-50 border border-slate-200 hover:border-[#0B2545] rounded-xl text-xs font-bold text-slate-800 hover:text-[#0B2545] transition-all flex items-center justify-center gap-2 group/btn shadow-xs"
-                >
-                  Inspect Technical Specs
-                  <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover/btn:translate-x-1 transition-transform" />
-                </button>
-              </div>
-            </motion.div>
-          ))}
+          {/* Complementary Hardware Stack (5 Columns, Asymmetric Cards) */}
+          <div className="lg:col-span-5 space-y-6">
+            {complementaryHardware.map((product, idx) => (
+              <motion.div
+                key={product.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ duration: 0.5, delay: idx * 0.12, ease: easeEngineering }}
+              >
+                <Card className="overflow-hidden bg-white hover:shadow-md transition-shadow">
+                  <div className="relative aspect-[16/9] bg-slate-100 overflow-hidden">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-103"
+                    />
+                    <div className="absolute top-3 left-3">
+                      <span className="px-2.5 py-0.5 bg-white/95 backdrop-blur-md text-[10px] font-bold text-slate-900 rounded-md shadow-2xs">
+                        {product.category}
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="p-6 space-y-4">
+                    <div>
+                      <h4 className="text-lg font-bold text-slate-900 tracking-tight">
+                        {product.name}
+                      </h4>
+                      <span className="text-xs font-semibold text-[#0B2545] block mt-0.5">
+                        {product.tagline}
+                      </span>
+                      <p className="text-xs text-slate-600 mt-2 line-clamp-2 leading-relaxed">
+                        {product.description}
+                      </p>
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-2">
+                      {product.keyMetrics.slice(0, 2).map((m) => (
+                        <div key={m.label} className="bg-slate-50 p-2 rounded-lg border border-slate-200/70">
+                          <span className="text-[9px] uppercase font-bold text-slate-400 block">{m.label}</span>
+                          <span className="text-xs font-mono font-bold text-[#0B2545]">{m.value}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => setActiveModalProduct(product)}
+                      className="w-full text-xs font-semibold text-slate-800"
+                    >
+                      Technical Specs
+                    </Button>
+                  </div>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
 
-      {/* Technical Specifications Modal (Pure Light Theme) */}
+      {/* Technical Specifications Modal */}
       <AnimatePresence>
         {activeModalProduct && (
           <div
@@ -149,7 +212,7 @@ export const ProductsSection: React.FC = () => {
               {/* Header */}
               <div className="px-6 py-5 bg-slate-50 border-b border-slate-200 flex items-center justify-between sticky top-0 bg-white/95 backdrop-blur-md z-10">
                 <div>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#0D9488]">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#0B2545]">
                     Engineering Specifications
                   </span>
                   <h3 id="product-modal-title" className="text-xl font-bold text-slate-900">
@@ -159,7 +222,7 @@ export const ProductsSection: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setActiveModalProduct(null)}
-                  className="w-8 h-8 rounded-lg text-slate-400 hover:text-slate-800 hover:bg-slate-100 flex items-center justify-center"
+                  className="w-8 h-8 rounded-lg text-slate-400 hover:text-slate-800 hover:bg-slate-100 flex items-center justify-center cursor-pointer"
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -232,7 +295,7 @@ export const ProductsSection: React.FC = () => {
                   <ul className="space-y-2">
                     {activeModalProduct.features.map((feat) => (
                       <li key={feat} className="text-xs sm:text-sm text-slate-700 flex items-start gap-2.5">
-                        <ShieldCheck className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
+                        <ShieldCheck className="w-4 h-4 text-[#0B2545] mt-0.5 shrink-0" />
                         <span className="leading-snug">{feat}</span>
                       </li>
                     ))}
@@ -245,13 +308,12 @@ export const ProductsSection: React.FC = () => {
                 <span className="text-xs text-slate-500">
                   Documentation version: Prototype Rev 2.4
                 </span>
-                <button
-                  type="button"
+                <Button
                   onClick={() => setActiveModalProduct(null)}
-                  className="px-4 py-2 bg-[#0B2545] text-white text-xs font-bold rounded-xl hover:bg-[#133E87] transition-colors"
+                  className="bg-[#0B2545] hover:bg-[#133E87] text-white text-xs"
                 >
                   Close Specification
-                </button>
+                </Button>
               </div>
             </motion.div>
           </div>
