@@ -2,10 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight, ArrowDown } from 'lucide-react'
-import { STARTUP_META } from '@/constants/projectData'
 import { easeEngineering } from '@/animations/motionVariants'
 import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
 import { OilSpillText } from '@/components/ui/OilSpillText'
 
 export const HeroSection: React.FC = () => {
@@ -31,17 +29,6 @@ export const HeroSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-8 items-center">
           {/* Left Column: Tightly constrained, asymmetric editorial typography */}
           <div className="lg:col-span-6 xl:col-span-6 space-y-5 sm:space-y-6 text-left pr-0 lg:pr-4">
-            {/* Minimal Badge */}
-            <motion.div
-              initial={{ opacity: 0, x: -16 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, ease: easeEngineering }}
-            >
-              <Badge variant="outline" className="px-3 py-1 text-[11px] sm:text-xs font-semibold text-slate-700 bg-white shadow-2xs">
-                {STARTUP_META.institution} · {STARTUP_META.stage}
-              </Badge>
-            </motion.div>
-
             {/* Asymmetrical Big Headline with Fluid Oil Spillage Animation inside text */}
             <motion.h1
               initial={{ opacity: 0, y: 24 }}
@@ -61,7 +48,7 @@ export const HeroSection: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.16, ease: easeEngineering }}
               className="text-sm sm:text-base lg:text-lg text-slate-600 max-w-lg font-normal leading-relaxed"
             >
-              Autonomous oleophilic skimmer prototypes developed through university laboratory research. High-throughput mechanical separation engineered to collect marine hydrocarbons directly at the boundary layer.
+              Autonomous oleophilic skimmer prototypes developed through laboratory research. High-throughput mechanical separation engineered to collect marine hydrocarbons directly at the boundary layer.
             </motion.p>
 
             {/* Action Buttons (Full width on tiny screens, flex on sm+) */}
@@ -113,10 +100,10 @@ export const HeroSection: React.FC = () => {
               </div>
               <div>
                 <span className="text-[9px] sm:text-[10px] uppercase font-bold text-slate-400 tracking-wider block">
-                  Status
+                  Capacity
                 </span>
                 <span className="text-base sm:text-xl font-mono font-bold text-slate-900 mt-0.5 block">
-                  TRL 5
+                  1,800 L/h
                 </span>
               </div>
             </motion.div>
