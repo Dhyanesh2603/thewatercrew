@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Microscope, Users, UserPlus, Mail, Briefcase } from 'lucide-react'
+import { ArrowRight, Microscope, Users, UserPlus, Mail } from 'lucide-react'
 import { HeroSection } from '@/components/sections/HeroSection'
 import { StartupSection } from '@/components/sections/StartupSection'
 import { ProductsSection } from '@/components/sections/ProductsSection'
@@ -38,7 +38,7 @@ export const HomePage: React.FC = () => {
       {/* 4. Project Timeline & Milestones */}
       <ProjectTimelineSection />
 
-      {/* 5. Multipage Directory / Deep Dive Cards */}
+      {/* 5. Multipage Directory Cards (Clean 2x2 grid) */}
       <section className="py-20 sm:py-28 bg-[#F4F6F8] border-t border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mb-12">
@@ -53,11 +53,11 @@ export const HomePage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Card 1: Research */}
             <Link
               to="/research"
-              className="group p-6 sm:p-7 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:shadow-md hover:border-[#076E73]/50 transition-all duration-300 flex flex-col justify-between"
+              className="group p-7 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:shadow-md hover:border-[#076E73]/50 transition-all duration-300 flex flex-col justify-between"
             >
               <div>
                 <div className="w-11 h-11 rounded-xl bg-slate-100 border border-slate-200 text-[#076E73] flex items-center justify-center mb-4 group-hover:scale-105 group-hover:bg-[#076E73] group-hover:text-white transition-all">
@@ -67,7 +67,7 @@ export const HomePage: React.FC = () => {
                   Research & Rigs
                   <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-[#076E73]" />
                 </h3>
-                <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
                   12m wave flume testing, boundary layer oleophilic mechanics, and CNC polymer fabrication facilities.
                 </p>
               </div>
@@ -79,7 +79,7 @@ export const HomePage: React.FC = () => {
             {/* Card 2: Team */}
             <Link
               to="/team"
-              className="group p-6 sm:p-7 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:shadow-md hover:border-[#076E73]/50 transition-all duration-300 flex flex-col justify-between"
+              className="group p-7 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:shadow-md hover:border-[#076E73]/50 transition-all duration-300 flex flex-col justify-between"
             >
               <div>
                 <div className="w-11 h-11 rounded-xl bg-slate-100 border border-slate-200 text-[#076E73] flex items-center justify-center mb-4 group-hover:scale-105 group-hover:bg-[#076E73] group-hover:text-white transition-all">
@@ -89,7 +89,7 @@ export const HomePage: React.FC = () => {
                   Core Team
                   <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-[#076E73]" />
                 </h3>
-                <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
                   Meet our faculty lead Dr. J Ranjitha with direct portfolio access, alongside student robotics & fluid dynamicists.
                 </p>
               </div>
@@ -98,10 +98,10 @@ export const HomePage: React.FC = () => {
               </span>
             </Link>
 
-            {/* Card 3: Join */}
+            {/* Card 3: Join Us */}
             <Link
               to="/join"
-              className="group p-6 sm:p-7 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:shadow-md hover:border-[#076E73]/50 transition-all duration-300 flex flex-col justify-between"
+              className="group p-7 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:shadow-md hover:border-[#076E73]/50 transition-all duration-300 flex flex-col justify-between"
             >
               <div>
                 <div className="w-11 h-11 rounded-xl bg-slate-100 border border-slate-200 text-[#076E73] flex items-center justify-center mb-4 group-hover:scale-105 group-hover:bg-[#076E73] group-hover:text-white transition-all">
@@ -111,7 +111,7 @@ export const HomePage: React.FC = () => {
                   Join the Crew
                   <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-[#076E73]" />
                 </h3>
-                <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
                   Cohort intake for undergraduate and postgraduate engineers passionate about ocean conservation hardware.
                 </p>
               </div>
@@ -120,32 +120,10 @@ export const HomePage: React.FC = () => {
               </span>
             </Link>
 
-            {/* Card 4: Career Options */}
-            <Link
-              to="/career"
-              className="group p-6 sm:p-7 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:shadow-md hover:border-[#076E73]/50 transition-all duration-300 flex flex-col justify-between"
-            >
-              <div>
-                <div className="w-11 h-11 rounded-xl bg-slate-100 border border-slate-200 text-[#076E73] flex items-center justify-center mb-4 group-hover:scale-105 group-hover:bg-[#076E73] group-hover:text-white transition-all">
-                  <Briefcase className="w-5 h-5" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 group-hover:text-[#076E73] transition-colors flex items-center justify-between">
-                  Career Options
-                  <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-[#076E73]" />
-                </h3>
-                <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  Research internships, engineering fellowships, and telemetry opportunities in marine autonomy.
-                </p>
-              </div>
-              <span className="mt-5 inline-flex items-center text-xs font-bold text-[#076E73] gap-1">
-                View Open Positions &rarr;
-              </span>
-            </Link>
-
-            {/* Card 5: Contact */}
+            {/* Card 4: Contact */}
             <Link
               to="/contact"
-              className="group p-6 sm:p-7 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:shadow-md hover:border-[#076E73]/50 transition-all duration-300 flex flex-col justify-between md:col-span-2 lg:col-span-2"
+              className="group p-7 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:shadow-md hover:border-[#076E73]/50 transition-all duration-300 flex flex-col justify-between"
             >
               <div>
                 <div className="w-11 h-11 rounded-xl bg-slate-100 border border-slate-200 text-[#076E73] flex items-center justify-center mb-4 group-hover:scale-105 group-hover:bg-[#076E73] group-hover:text-white transition-all">
@@ -155,8 +133,8 @@ export const HomePage: React.FC = () => {
                   Academic & Industry Inquiries
                   <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-[#076E73]" />
                 </h3>
-                <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed max-w-xl">
-                  Connect directly with our laboratory coordinators for flume testing demonstrations, joint grants, port authority deployment trials, or general inquiries.
+                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                  Connect directly with our laboratory coordinators for flume testing demonstrations, joint grants, or general inquiries.
                 </p>
               </div>
               <span className="mt-5 inline-flex items-center text-xs font-bold text-[#076E73] gap-1">

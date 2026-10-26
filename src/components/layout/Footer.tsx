@@ -59,6 +59,14 @@ export const Footer: React.FC = () => {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link
+                  to="/join"
+                  className="hover:text-[#076E73] transition-colors"
+                >
+                  Join Us
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -89,8 +97,8 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/career" className="hover:text-[#076E73] transition-colors">
-                  Career Options & Internships
+                <Link to="/join" className="hover:text-[#076E73] transition-colors">
+                  Student Cohort Recruitment
                 </Link>
               </li>
             </ul>

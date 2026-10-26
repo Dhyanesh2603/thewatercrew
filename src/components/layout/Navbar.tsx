@@ -9,7 +9,7 @@ interface NavbarProps {
   onOpenInternship?: () => void
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ onOpenInternship }) => {
+export const Navbar: React.FC<NavbarProps> = () => {
   const [isHidden, setIsHidden] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -59,7 +59,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInternship }) => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Brand Logo & Title (Zero hover effects as requested) */}
+          {/* Brand Logo & Title (Zero hover effects) */}
           <Link
             to="/"
             className="flex items-center gap-3 focus:outline-none rounded-lg p-1"
@@ -110,19 +110,21 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInternship }) => {
               )
             })}
 
-            {/* Simple Green Action Button */}
-            {onOpenInternship && (
-              <div className="ml-2 pl-2 border-l border-[#2C3E3A]">
-                <button
-                  type="button"
-                  onClick={onOpenInternship}
-                  className="px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider rounded-lg transition-colors bg-[#076E73] hover:bg-[#065A5E] text-white shadow-2xs flex items-center gap-1 cursor-pointer"
-                >
-                  <span>Apply</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
-                </button>
-              </div>
-            )}
+            {/* Action Button: Join Us (Moved to the last position in place of Apply button, styled identically) */}
+            <div className="ml-2 pl-2 border-l border-[#2C3E3A]">
+              <Link
+                to="/join"
+                className={cn(
+                  'px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider rounded-lg transition-colors flex items-center gap-1 cursor-pointer shadow-2xs',
+                  location.pathname === '/join'
+                    ? 'bg-[#065A5E] text-white ring-1 ring-white/20'
+                    : 'bg-[#076E73] hover:bg-[#065A5E] text-white'
+                )}
+              >
+                <span>Join Us</span>
+                <ArrowUpRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
           </nav>
 
           {/* Mobile Hamburger Button */}
@@ -174,21 +176,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInternship }) => {
                 )
               })}
 
-              {onOpenInternship && (
-                <div className="pt-4 mt-2 border-t border-[#2C3E3A]">
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setMobileMenuOpen(false)
-                      onOpenInternship()
-                    }}
-                    className="w-full py-3 bg-[#076E73] hover:bg-[#065A5E] text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-colors shadow-2xs flex items-center justify-center gap-1.5 cursor-pointer"
-                  >
-                    <span>Apply for Internship</span>
-                    <ArrowUpRight className="w-4 h-4" />
-                  </button>
-                </div>
-              )}
+              <div className="pt-4 mt-2 border-t border-[#2C3E3A]">
+                <Link
+                  to="/join"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="w-full py-3 bg-[#076E73] hover:bg-[#065A5E] text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-colors shadow-2xs flex items-center justify-center gap-1.5 cursor-pointer"
+                >
+                  <span>Join Us</span>
+                  <ArrowUpRight className="w-4 h-4" />
+                </Link>
+              </div>
             </div>
           </motion.div>
         )}
