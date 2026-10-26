@@ -19,21 +19,21 @@ export const Footer: React.FC = () => {
           {/* Column 1 & 2: Startup Branding & Academic Affiliation */}
           <div className="lg:col-span-2 space-y-4">
             <Link to="/" className="flex items-center gap-2.5 sm:gap-3">
-              <div className="flex items-center gap-2 shrink-0">
-                {/* Water Crew Logo */}
-                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full overflow-hidden flex items-center justify-center bg-slate-900 border border-slate-300 shadow-xs shrink-0">
-                  <img src="/logo.png" alt="The water crew" className="w-full h-full object-cover" />
-                </div>
+              {/* Water Crew Circular Logo */}
+              <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full overflow-hidden flex items-center justify-center bg-slate-900 border border-slate-300 shadow-xs shrink-0">
+                <img src="/logo.png" alt="The water crew" className="w-full h-full object-cover" />
+              </div>
 
-                {/* VIT Logo */}
-                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full overflow-hidden flex items-center justify-center bg-white border border-slate-300 p-0.5 shadow-xs shrink-0">
+              <div className="flex items-center gap-2 sm:gap-2.5">
+                <span className="text-base sm:text-lg font-bold tracking-tight text-[#0B2A3C] select-none whitespace-nowrap">
+                  The water crew
+                </span>
+
+                {/* VIT Logo beside the text */}
+                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full overflow-hidden flex items-center justify-center bg-white border border-slate-300 p-0.5 shadow-xs shrink-0">
                   <img src="/vit-logo.png" alt="Vellore Institute of Technology" className="w-full h-full object-contain" />
                 </div>
               </div>
-
-              <span className="text-base sm:text-lg font-bold tracking-tight text-[#0B2A3C] select-none whitespace-nowrap">
-                The water crew
-              </span>
             </Link>
 
             <p className="text-slate-600 text-xs leading-relaxed max-w-sm">
