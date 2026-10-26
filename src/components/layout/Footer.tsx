@@ -18,11 +18,11 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-12 border-b border-slate-200">
           {/* Column 1 & 2: Startup Branding & Academic Affiliation */}
           <div className="lg:col-span-2 space-y-4">
-            <Link to="/" className="flex items-center gap-3 group">
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden flex items-center justify-center bg-slate-900 border border-slate-300 shadow-xs shrink-0 transition-transform duration-300 group-hover:scale-105">
+            <Link to="/" className="flex items-center gap-3">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden flex items-center justify-center bg-slate-900 border border-slate-300 shadow-xs shrink-0">
                 <img src="/logo.png" alt="The water crew" className="w-full h-full object-cover" />
               </div>
-              <span className="text-base sm:text-lg font-bold tracking-tight text-[#0B2A3C] group-hover:text-[#076E73] transition-colors oil-spill-hover">
+              <span className="text-base sm:text-lg font-bold tracking-tight text-[#0B2A3C] select-none">
                 The water crew
               </span>
             </Link>

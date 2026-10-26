@@ -51,28 +51,28 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInternship }) => {
     <header
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out',
-        // Darker shade menu bar to make it distinctly identifiable
-        'bg-[#0B1520] border-b border-slate-800 text-white',
+        // Relaxing, calm dark slate-green tone (not blue, not pitch dark)
+        'bg-[#202D2B] border-b border-[#2C3E3A] text-white',
         isScrolled ? 'shadow-md py-3' : 'py-3.5 sm:py-4',
         isHidden ? '-translate-y-full opacity-0 pointer-events-none' : 'translate-y-0 opacity-100'
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Brand Logo & Title */}
+          {/* Brand Logo & Title (Zero hover effects as requested) */}
           <Link
             to="/"
-            className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-emerald-500/40 rounded-lg p-1"
+            className="flex items-center gap-3 focus:outline-none rounded-lg p-1"
             aria-label="The water crew Home"
           >
-            <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden flex items-center justify-center transition-transform duration-300 group-hover:scale-105 border border-slate-700 bg-slate-900 shadow-xs shrink-0">
+            <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden flex items-center justify-center border border-white/20 bg-slate-900 shadow-xs shrink-0">
               <img
                 src="/logo.png"
                 alt="The water crew Logo"
                 className="w-full h-full object-cover"
               />
             </div>
-            <span className="text-base sm:text-lg font-bold tracking-tight text-white group-hover:text-emerald-400 transition-colors oil-spill-hover">
+            <span className="text-base sm:text-lg font-bold tracking-tight text-white select-none">
               The water crew
             </span>
           </Link>
@@ -92,7 +92,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInternship }) => {
                   className={cn(
                     'px-3 lg:px-3.5 py-1.5 text-xs lg:text-sm font-semibold uppercase tracking-wider rounded-lg transition-colors relative',
                     isActive
-                      ? 'text-white font-bold bg-white/10'
+                      ? 'text-white font-bold bg-white/12'
                       : 'text-slate-300 hover:text-white hover:bg-white/5'
                   )}
                 >
@@ -110,9 +110,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInternship }) => {
               )
             })}
 
-            {/* Simple Green Action Button (No glow, no cyberpunk styling) */}
+            {/* Simple Green Action Button */}
             {onOpenInternship && (
-              <div className="ml-2 pl-2 border-l border-slate-800">
+              <div className="ml-2 pl-2 border-l border-[#2C3E3A]">
                 <button
                   type="button"
                   onClick={onOpenInternship}
@@ -132,7 +132,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInternship }) => {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-expanded={mobileMenuOpen}
               aria-label="Toggle Navigation Menu"
-              className="w-10 h-10 rounded-xl flex items-center justify-center transition-colors text-slate-200 hover:text-white hover:bg-slate-800 border border-slate-800"
+              className="w-10 h-10 rounded-xl flex items-center justify-center transition-colors text-slate-200 hover:text-white hover:bg-white/5 border border-white/10"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -148,7 +148,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInternship }) => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: 'easeInOut' }}
-            className="md:hidden bg-[#0B1520] border-b border-slate-800 shadow-xl px-5 py-6 mt-3 max-h-[85vh] overflow-y-auto"
+            className="md:hidden bg-[#202D2B] border-b border-[#2C3E3A] shadow-xl px-5 py-6 mt-3 max-h-[85vh] overflow-y-auto"
           >
             <div className="space-y-2">
               {NAV_ITEMS.map((item) => {
@@ -165,7 +165,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInternship }) => {
                     className={cn(
                       'block px-4 py-3 text-sm font-semibold uppercase tracking-wider rounded-xl transition-colors',
                       isActive
-                        ? 'bg-white/10 text-white font-bold'
+                        ? 'bg-white/12 text-white font-bold'
                         : 'text-slate-300 hover:text-white hover:bg-white/5'
                     )}
                   >
@@ -175,7 +175,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInternship }) => {
               })}
 
               {onOpenInternship && (
-                <div className="pt-4 mt-2 border-t border-slate-800">
+                <div className="pt-4 mt-2 border-t border-[#2C3E3A]">
                   <button
                     type="button"
                     onClick={() => {
