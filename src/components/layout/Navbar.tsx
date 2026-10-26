@@ -69,24 +69,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInternship }) => {
           <Link
             to="/"
             className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-cyan-500/40 rounded-lg p-1"
-            aria-label="The Water Crew Home"
+            aria-label="The water crew Home"
           >
-            <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-xl overflow-hidden flex items-center justify-center transition-transform duration-300 group-hover:scale-105 border border-slate-700/60 bg-slate-900/80 shadow-inner">
+            <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden flex items-center justify-center transition-transform duration-300 group-hover:scale-105 border border-slate-700/80 bg-slate-900 shadow-md shrink-0">
               <img
                 src="/logo.png"
-                alt="The Water Crew Logo"
-                className="w-full h-full object-contain p-1"
+                alt="The water crew Logo"
+                className="w-full h-full object-cover"
               />
             </div>
-            <div className="flex flex-col">
-              <span className="text-base sm:text-lg font-black tracking-tight leading-tight oil-spill-hover">
-                <span className="text-white">THE WATER</span>{' '}
-                <span className="text-[#00F0FF] font-black">CREW</span>
-              </span>
-              <span className="text-[9px] sm:text-[10px] font-semibold tracking-widest uppercase text-slate-400 -mt-0.5">
-                MARINE OIL SPILL RECOVERY
-              </span>
-            </div>
+            <span className="text-base sm:text-lg font-bold tracking-tight text-white group-hover:text-[#00F0FF] transition-colors oil-spill-hover">
+              The water crew
+            </span>
           </Link>
 
           {/* Desktop Navigation Links (Right - matching reference website) */}

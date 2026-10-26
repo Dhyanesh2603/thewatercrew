@@ -18,19 +18,13 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-12 border-b border-slate-200">
           {/* Column 1 & 2: Startup Branding & Academic Affiliation */}
           <div className="lg:col-span-2 space-y-4">
-            <Link to="/" className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl overflow-hidden flex items-center justify-center bg-transparent border border-slate-200/60 shadow-xs">
-                <img src="/logo.png" alt="The Water Crew" className="w-full h-full object-contain" />
+            <Link to="/" className="flex items-center gap-3 group">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden flex items-center justify-center bg-slate-900 border border-slate-300 shadow-xs shrink-0 transition-transform duration-300 group-hover:scale-105">
+                <img src="/logo.png" alt="The water crew" className="w-full h-full object-cover" />
               </div>
-              <div className="flex flex-col">
-                <span className="text-base font-extrabold tracking-tight oil-spill-hover">
-                  <span className="text-[#0B2A3C]">thewater</span>
-                  <span className="text-[#076E73]">crew</span>
-                </span>
-                <span className="text-[10px] font-semibold text-[#4A6670] uppercase tracking-wider">
-                  OCEAN OIL SPILL RECOVERY
-                </span>
-              </div>
+              <span className="text-base sm:text-lg font-bold tracking-tight text-[#0B2A3C] group-hover:text-[#076E73] transition-colors oil-spill-hover">
+                The water crew
+              </span>
             </Link>
 
             <p className="text-slate-600 text-xs leading-relaxed max-w-sm">
