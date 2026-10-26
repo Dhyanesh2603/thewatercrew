@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight, ArrowDown } from 'lucide-react'
 import { STARTUP_META } from '@/constants/projectData'
@@ -73,23 +74,21 @@ export const HeroSection: React.FC = () => {
               <Button
                 size="lg"
                 onClick={() => handleScrollTo('project')}
-                className="flex items-center justify-center gap-2 bg-[#0B2A3C] hover:bg-[#076E73] text-white px-6 shadow-xs w-full sm:w-auto"
+                className="flex items-center justify-center gap-2 bg-[#0B2A3C] hover:bg-[#076E73] text-white px-6 shadow-xs w-full sm:w-auto cursor-pointer"
               >
                 Explore Project
                 <ArrowRight className="w-4 h-4" />
               </Button>
 
-              <Button
-                size="lg"
-                variant="outline"
-                onClick={() => handleScrollTo('contact')}
-                className="px-6 text-slate-800 justify-center w-full sm:w-auto"
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center h-10 px-6 rounded-xl border border-slate-200 bg-white text-sm font-semibold text-slate-800 hover:bg-slate-50 transition-colors shadow-2xs w-full sm:w-auto"
               >
                 Contact Lab
-              </Button>
+              </Link>
             </motion.div>
 
-            {/* Responsive Metrics Strip (Grid with clean borders, never wraps awkwardly on mobile) */}
+            {/* Responsive Metrics Strip */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -162,7 +161,7 @@ export const HeroSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Asymmetric Offset Floating Accent Pill (Hidden on mobile, visible on sm+) */}
+            {/* Asymmetric Offset Floating Accent Pill */}
             <div className="hidden sm:flex absolute -bottom-5 -left-5 bg-white border border-slate-200 rounded-2xl p-4 shadow-lg items-center gap-3.5 z-20">
               <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center font-mono font-bold text-sm text-[#0B2A3C]">
                 12m

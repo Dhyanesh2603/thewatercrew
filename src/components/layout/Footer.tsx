@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { ArrowUp, ShieldCheck, Waves } from 'lucide-react'
 import { STARTUP_META } from '@/constants/projectData'
 import { NAV_ITEMS } from '@/constants/navigation'
@@ -17,7 +18,7 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-12 border-b border-slate-200">
           {/* Column 1 & 2: Startup Branding & Academic Affiliation */}
           <div className="lg:col-span-2 space-y-4">
-            <div className="flex items-center gap-3">
+            <Link to="/" className="flex items-center gap-3">
               <div className="w-9 h-9 rounded-xl overflow-hidden flex items-center justify-center bg-transparent border border-slate-200/60 shadow-xs">
                 <img src="/logo.png" alt="The Water Crew" className="w-full h-full object-contain" />
               </div>
@@ -30,7 +31,7 @@ export const Footer: React.FC = () => {
                   OCEAN OIL SPILL RECOVERY
                 </span>
               </div>
-            </div>
+            </Link>
 
             <p className="text-slate-600 text-xs leading-relaxed max-w-sm">
               An engineering startup and academic research project founded at the Vellore Institute of Technology. Designing next-generation autonomous oleophilic recovery hardware to safeguard marine ecosystems.
@@ -56,12 +57,12 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2">
               {NAV_ITEMS.map((item) => (
                 <li key={item.label}>
-                  <a
-                    href={item.href}
+                  <Link
+                    to={item.href}
                     className="hover:text-[#076E73] transition-colors"
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -70,33 +71,33 @@ export const Footer: React.FC = () => {
           {/* Column 4: Research & Academic Documentation */}
           <div className="space-y-3">
             <span className="text-xs font-bold uppercase tracking-wider text-slate-900 block">
-              Research & Rigs
+              Laboratory & Divisions
             </span>
             <ul className="space-y-2">
               <li>
-                <a href="#research" className="hover:text-[#076E73] transition-colors">
+                <Link to="/research" className="hover:text-[#076E73] transition-colors">
                   12m Wave Flume Facility
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#research" className="hover:text-[#076E73] transition-colors">
+                <Link to="/research" className="hover:text-[#076E73] transition-colors">
                   CNC Polymer Milling
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#project" className="hover:text-[#076E73] transition-colors">
+                <Link to="/research" className="hover:text-[#076E73] transition-colors">
                   Hydrodynamic CFD Models
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#team" className="hover:text-[#076E73] transition-colors">
+                <Link to="/team" className="hover:text-[#076E73] transition-colors">
                   Core Engineering Team
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#team" className="hover:text-[#076E73] transition-colors">
-                  Faculty Leadership
-                </a>
+                <Link to="/career" className="hover:text-[#076E73] transition-colors">
+                  Career Options & Internships
+                </Link>
               </li>
             </ul>
           </div>
