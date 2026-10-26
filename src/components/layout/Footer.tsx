@@ -18,11 +18,20 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-12 border-b border-slate-200">
           {/* Column 1 & 2: Startup Branding & Academic Affiliation */}
           <div className="lg:col-span-2 space-y-4">
-            <Link to="/" className="flex items-center gap-3">
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden flex items-center justify-center bg-slate-900 border border-slate-300 shadow-xs shrink-0">
-                <img src="/logo.png" alt="The water crew" className="w-full h-full object-cover" />
+            <Link to="/" className="flex items-center gap-2.5 sm:gap-3">
+              <div className="flex items-center gap-2 shrink-0">
+                {/* Water Crew Logo */}
+                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full overflow-hidden flex items-center justify-center bg-slate-900 border border-slate-300 shadow-xs shrink-0">
+                  <img src="/logo.png" alt="The water crew" className="w-full h-full object-cover" />
+                </div>
+
+                {/* VIT Logo */}
+                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full overflow-hidden flex items-center justify-center bg-white border border-slate-300 p-0.5 shadow-xs shrink-0">
+                  <img src="/vit-logo.png" alt="Vellore Institute of Technology" className="w-full h-full object-contain" />
+                </div>
               </div>
-              <span className="text-base sm:text-lg font-bold tracking-tight text-[#0B2A3C] select-none">
+
+              <span className="text-base sm:text-lg font-bold tracking-tight text-[#0B2A3C] select-none whitespace-nowrap">
                 The water crew
               </span>
             </Link>

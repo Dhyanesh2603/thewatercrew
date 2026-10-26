@@ -59,20 +59,33 @@ export const Navbar: React.FC<NavbarProps> = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Brand Logo & Title (Zero hover effects) */}
+          {/* Brand Logos (Water Crew + VIT side by side) & Title */}
           <Link
             to="/"
-            className="flex items-center gap-3 focus:outline-none rounded-lg p-1"
+            className="flex items-center gap-2.5 sm:gap-3 focus:outline-none rounded-lg p-1"
             aria-label="The water crew Home"
           >
-            <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden flex items-center justify-center border border-white/20 bg-slate-900 shadow-xs shrink-0">
-              <img
-                src="/logo.png"
-                alt="The water crew Logo"
-                className="w-full h-full object-cover"
-              />
+            <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
+              {/* The Water Crew Logo */}
+              <div className="relative w-8 h-8 sm:w-9 sm:h-9 rounded-full overflow-hidden flex items-center justify-center border border-white/20 bg-slate-900 shadow-xs shrink-0">
+                <img
+                  src="/logo.png"
+                  alt="The water crew Logo"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* VIT Logo */}
+              <div className="relative w-8 h-8 sm:w-9 sm:h-9 rounded-full overflow-hidden flex items-center justify-center border border-white/20 bg-white p-0.5 shadow-xs shrink-0">
+                <img
+                  src="/vit-logo.png"
+                  alt="Vellore Institute of Technology Logo"
+                  className="w-full h-full object-contain"
+                />
+              </div>
             </div>
-            <span className="text-base sm:text-lg font-bold tracking-tight text-white select-none">
+
+            <span className="text-base sm:text-lg font-bold tracking-tight text-white select-none whitespace-nowrap">
               The water crew
             </span>
           </Link>
@@ -110,7 +123,7 @@ export const Navbar: React.FC<NavbarProps> = () => {
               )
             })}
 
-            {/* Action Button: Join Us (Moved to the last position in place of Apply button, styled identically) */}
+            {/* Action Button: Join Us */}
             <div className="ml-2 pl-2 border-l border-[#2C3E3A]">
               <Link
                 to="/join"
