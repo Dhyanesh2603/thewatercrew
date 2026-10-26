@@ -49,7 +49,7 @@ export const JoinPage: React.FC<JoinPageProps> = ({ onOpenInternshipModal }) => 
   }
 
   return (
-    <main className="w-full relative pt-20">
+    <main className="w-full relative pt-20 bg-[#FAFBFC]">
       <Helmet>
         <title>Join The Water Crew | Student Research & Engineering Cohort</title>
         <meta
@@ -58,18 +58,18 @@ export const JoinPage: React.FC<JoinPageProps> = ({ onOpenInternshipModal }) => 
         />
       </Helmet>
 
-      {/* Header Banner */}
-      <section className="bg-gradient-to-b from-[#070D14] to-[#0E1A27] text-white py-16 sm:py-24 border-b border-slate-800">
+      {/* Clean White Page Header */}
+      <section className="bg-white py-16 sm:py-24 border-b border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <Badge variant="outline" className="mb-4 text-xs font-semibold text-cyan-300 border-cyan-500/30 bg-cyan-950/40">
-              <UserPlus className="w-3.5 h-3.5 text-[#00F0FF] mr-1.5" />
+            <Badge variant="outline" className="mb-4 text-xs font-semibold text-slate-700 bg-white">
+              <UserPlus className="w-3.5 h-3.5 text-[#076E73] mr-1.5" />
               STUDENT COHORT INTAKE
             </Badge>
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
+            <OilSpillText as="h1" className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
               Build Real Ocean Hardware with Us
-            </h1>
-            <p className="mt-5 text-base sm:text-lg text-slate-300 leading-relaxed font-light">
+            </OilSpillText>
+            <p className="mt-5 text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
               We invite motivated undergraduate and postgraduate engineering students to join our active laboratory cohort. Work directly on physical skimmer prototypes, wave-flume hydrodynamic trials, and autonomous telemetry.
             </p>
 
@@ -77,7 +77,7 @@ export const JoinPage: React.FC<JoinPageProps> = ({ onOpenInternshipModal }) => 
               <div className="mt-6">
                 <Button
                   onClick={onOpenInternshipModal}
-                  className="bg-[#00F0FF] text-slate-950 hover:bg-cyan-300 font-bold text-xs uppercase tracking-wider rounded-xl shadow-[0_0_15px_rgba(0,240,255,0.3)] flex items-center gap-1.5 cursor-pointer"
+                  className="bg-[#076E73] hover:bg-[#065A5E] text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-2xs flex items-center gap-1.5 cursor-pointer"
                 >
                   <span>Quick Modal Application</span>
                   <ArrowUpRight className="w-4 h-4" />
@@ -91,8 +91,8 @@ export const JoinPage: React.FC<JoinPageProps> = ({ onOpenInternshipModal }) => 
       {/* Cohort Benefits */}
       <section className="py-20 sm:py-28 bg-[#FAFBFC] border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-            <Card className="p-7 bg-white border-slate-200 shadow-xs">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-20">
+            <Card className="p-7 bg-white border-slate-200/90 shadow-2xs">
               <div className="w-10 h-10 rounded-xl bg-slate-100 border border-slate-200 text-[#076E73] flex items-center justify-center mb-4">
                 <Rocket className="w-5 h-5" />
               </div>
@@ -102,7 +102,7 @@ export const JoinPage: React.FC<JoinPageProps> = ({ onOpenInternshipModal }) => 
               </p>
             </Card>
 
-            <Card className="p-7 bg-white border-slate-200 shadow-xs">
+            <Card className="p-7 bg-white border-slate-200/90 shadow-2xs">
               <div className="w-10 h-10 rounded-xl bg-slate-100 border border-slate-200 text-[#076E73] flex items-center justify-center mb-4">
                 <BookOpen className="w-5 h-5" />
               </div>
@@ -112,7 +112,7 @@ export const JoinPage: React.FC<JoinPageProps> = ({ onOpenInternshipModal }) => 
               </p>
             </Card>
 
-            <Card className="p-7 bg-white border-slate-200 shadow-xs">
+            <Card className="p-7 bg-white border-slate-200/90 shadow-2xs">
               <div className="w-10 h-10 rounded-xl bg-slate-100 border border-slate-200 text-[#076E73] flex items-center justify-center mb-4">
                 <Layers className="w-5 h-5" />
               </div>
@@ -137,7 +137,7 @@ export const JoinPage: React.FC<JoinPageProps> = ({ onOpenInternshipModal }) => 
               </p>
             </div>
 
-            <Card className="p-7 sm:p-10 bg-white border-slate-200 shadow-sm">
+            <Card className="p-7 sm:p-10 bg-white border-slate-200 shadow-2xs">
               {isSuccess ? (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.96 }}
@@ -155,7 +155,7 @@ export const JoinPage: React.FC<JoinPageProps> = ({ onOpenInternshipModal }) => 
                     <Button
                       type="button"
                       onClick={handleReset}
-                      className="bg-[#0B2A3C] hover:bg-[#076E73] text-white"
+                      className="bg-[#076E73] hover:bg-[#065A5E] text-white"
                     >
                       Submit Another Application
                     </Button>
@@ -174,7 +174,7 @@ export const JoinPage: React.FC<JoinPageProps> = ({ onOpenInternshipModal }) => 
                         placeholder="Your full name"
                         value={formData.fullName}
                         onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                        className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0B2A3C]/20 focus:border-[#0B2A3C] transition-all"
+                        className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#076E73]/20 focus:border-[#076E73] transition-all"
                       />
                     </div>
 
@@ -188,7 +188,7 @@ export const JoinPage: React.FC<JoinPageProps> = ({ onOpenInternshipModal }) => 
                         placeholder="yourname@vitstudent.ac.in"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0B2A3C]/20 focus:border-[#0B2A3C] transition-all"
+                        className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#076E73]/20 focus:border-[#076E73] transition-all"
                       />
                     </div>
                   </div>
@@ -203,7 +203,7 @@ export const JoinPage: React.FC<JoinPageProps> = ({ onOpenInternshipModal }) => 
                         placeholder="e.g. Vellore Institute of Technology"
                         value={formData.university}
                         onChange={(e) => setFormData({ ...formData, university: e.target.value })}
-                        className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0B2A3C]/20 focus:border-[#0B2A3C] transition-all"
+                        className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#076E73]/20 focus:border-[#076E73] transition-all"
                       />
                     </div>
 
@@ -217,7 +217,7 @@ export const JoinPage: React.FC<JoinPageProps> = ({ onOpenInternshipModal }) => 
                         placeholder="e.g. Mechanical / EEE / CSE / Robotics"
                         value={formData.degreeMajor}
                         onChange={(e) => setFormData({ ...formData, degreeMajor: e.target.value })}
-                        className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0B2A3C]/20 focus:border-[#0B2A3C] transition-all"
+                        className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#076E73]/20 focus:border-[#076E73] transition-all"
                       />
                     </div>
                   </div>
@@ -230,7 +230,7 @@ export const JoinPage: React.FC<JoinPageProps> = ({ onOpenInternshipModal }) => 
                       <select
                         value={formData.yearOfStudy}
                         onChange={(e) => setFormData({ ...formData, yearOfStudy: e.target.value })}
-                        className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0B2A3C]/20 focus:border-[#0B2A3C] transition-all"
+                        className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#076E73]/20 focus:border-[#076E73] transition-all"
                       >
                         <option value="1st Year">1st Year (Freshman)</option>
                         <option value="2nd Year">2nd Year (Sophomore)</option>
@@ -247,7 +247,7 @@ export const JoinPage: React.FC<JoinPageProps> = ({ onOpenInternshipModal }) => 
                       <select
                         value={formData.discipline}
                         onChange={(e) => setFormData({ ...formData, discipline: e.target.value })}
-                        className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0B2A3C]/20 focus:border-[#0B2A3C] transition-all"
+                        className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#076E73]/20 focus:border-[#076E73] transition-all"
                       >
                         <option value="Control Systems & Embedded">Control Systems & Embedded Telemetry</option>
                         <option value="Fluid Dynamics & CAD">Fluid Dynamics, CFD & Hydro-flume</option>
@@ -266,7 +266,7 @@ export const JoinPage: React.FC<JoinPageProps> = ({ onOpenInternshipModal }) => 
                       placeholder="https://github.com/username or LinkedIn"
                       value={formData.portfolioUrl}
                       onChange={(e) => setFormData({ ...formData, portfolioUrl: e.target.value })}
-                      className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0B2A3C]/20 focus:border-[#0B2A3C] transition-all"
+                      className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#076E73]/20 focus:border-[#076E73] transition-all"
                     />
                   </div>
 
@@ -280,7 +280,7 @@ export const JoinPage: React.FC<JoinPageProps> = ({ onOpenInternshipModal }) => 
                       placeholder="Detail previous projects, CAD modeling, microcontrollers used, or your interest in marine conservation hardware..."
                       value={formData.statement}
                       onChange={(e) => setFormData({ ...formData, statement: e.target.value })}
-                      className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0B2A3C]/20 focus:border-[#0B2A3C] transition-all resize-none"
+                      className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#076E73]/20 focus:border-[#076E73] transition-all resize-none"
                     />
                   </div>
 
@@ -291,7 +291,7 @@ export const JoinPage: React.FC<JoinPageProps> = ({ onOpenInternshipModal }) => 
                     <Button
                       type="submit"
                       disabled={isSubmitting}
-                      className="bg-[#0B2A3C] hover:bg-[#076E73] text-white flex items-center gap-2 cursor-pointer"
+                      className="bg-[#076E73] hover:bg-[#065A5E] text-white flex items-center gap-2 cursor-pointer shadow-2xs"
                     >
                       {isSubmitting ? 'Submitting Application...' : 'Submit Application'}
                       <Send className="w-3.5 h-3.5" />

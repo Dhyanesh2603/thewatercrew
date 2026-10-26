@@ -60,7 +60,7 @@ const CAREER_ROLES = [
 
 export const CareerPage: React.FC<CareerPageProps> = ({ onOpenInternshipModal }) => {
   return (
-    <main className="w-full relative pt-20">
+    <main className="w-full relative pt-20 bg-[#FAFBFC]">
       <Helmet>
         <title>Career Options & Engineering Fellowships | The Water Crew</title>
         <meta
@@ -69,18 +69,18 @@ export const CareerPage: React.FC<CareerPageProps> = ({ onOpenInternshipModal })
         />
       </Helmet>
 
-      {/* Header Banner */}
-      <section className="bg-gradient-to-b from-[#070D14] to-[#0E1A27] text-white py-16 sm:py-24 border-b border-slate-800">
+      {/* Clean White Page Header */}
+      <section className="bg-white py-16 sm:py-24 border-b border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <Badge variant="outline" className="mb-4 text-xs font-semibold text-cyan-300 border-cyan-500/30 bg-cyan-950/40">
-              <Briefcase className="w-3.5 h-3.5 text-[#00F0FF] mr-1.5" />
+            <Badge variant="outline" className="mb-4 text-xs font-semibold text-slate-700 bg-white">
+              <Briefcase className="w-3.5 h-3.5 text-[#076E73] mr-1.5" />
               FELLOWSHIPS & INTERNSHIPS
             </Badge>
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
+            <OilSpillText as="h1" className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
               Career & Engineering Options
-            </h1>
-            <p className="mt-5 text-base sm:text-lg text-slate-300 leading-relaxed font-light">
+            </OilSpillText>
+            <p className="mt-5 text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
               Join our interdisciplinary crew to design, test, and deploy marine hardware. We offer structured research internships and hands-on fellowships for ambitious engineering talent.
             </p>
           </div>
@@ -88,23 +88,23 @@ export const CareerPage: React.FC<CareerPageProps> = ({ onOpenInternshipModal })
       </section>
 
       {/* Career Roles Listing */}
-      <section className="py-24 sm:py-32 bg-[#FAFBFC] border-b border-slate-200">
+      <section className="py-20 sm:py-28 bg-[#FAFBFC] border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-14">
             <Badge variant="outline" className="mb-3 text-xs font-semibold text-slate-700 bg-white">
               OPEN COHORTS
             </Badge>
             <OilSpillText as="h2" className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
               Active Research & Engineering Openings
             </OilSpillText>
-            <p className="mt-4 text-base text-slate-600 leading-relaxed">
+            <p className="mt-3 text-base text-slate-600 leading-relaxed">
               Select an engineering track below to review responsibilities and submit your candidate portfolio.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
             {CAREER_ROLES.map((role) => (
-              <Card key={role.id} className="p-7 sm:p-8 bg-white border-slate-200 hover:shadow-md transition-shadow flex flex-col justify-between">
+              <Card key={role.id} className="p-7 sm:p-8 bg-white border-slate-200/90 shadow-2xs hover:shadow-md transition-shadow flex flex-col justify-between">
                 <div>
                   <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
                     <span className="px-3 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider bg-slate-100 text-[#076E73] border border-slate-200">
@@ -169,7 +169,7 @@ export const CareerPage: React.FC<CareerPageProps> = ({ onOpenInternshipModal })
                   </span>
                   <Button
                     onClick={onOpenInternshipModal}
-                    className="bg-[#0B2A3C] hover:bg-[#076E73] text-white flex items-center gap-1.5 px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-xl cursor-pointer"
+                    className="bg-[#076E73] hover:bg-[#065A5E] text-white flex items-center gap-1.5 px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-xl cursor-pointer shadow-2xs"
                   >
                     <span>Apply Now</span>
                     <ArrowUpRight className="w-4 h-4" />
@@ -181,21 +181,21 @@ export const CareerPage: React.FC<CareerPageProps> = ({ onOpenInternshipModal })
         </div>
       </section>
 
-      {/* Direct link to Join Page */}
-      <section className="py-16 bg-[#070D14] text-white">
+      {/* Clean Light CTA Bar */}
+      <section className="py-14 sm:py-16 bg-white border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <h3 className="text-2xl font-bold text-white">
+            <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
               Looking to submit a general application for the next semester cohort?
             </h3>
-            <p className="text-sm text-slate-400 mt-1 max-w-xl">
+            <p className="text-sm text-slate-600 mt-1 max-w-xl">
               You can also fill out the unified student candidate form on our Join page.
             </p>
           </div>
           <div className="flex items-center gap-3 shrink-0">
             <Link
               to="/join"
-              className="px-6 py-3 bg-[#00F0FF] text-slate-950 font-bold text-xs uppercase tracking-wider rounded-xl hover:bg-cyan-300 transition-colors shadow-[0_0_20px_rgba(0,240,255,0.3)]"
+              className="px-5 py-2.5 bg-[#076E73] hover:bg-[#065A5E] text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-colors shadow-2xs"
             >
               Go to Join Page
             </Link>

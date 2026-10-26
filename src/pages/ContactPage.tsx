@@ -23,7 +23,7 @@ const FAQS = [
 
 export const ContactPage: React.FC = () => {
   return (
-    <main className="w-full relative pt-20">
+    <main className="w-full relative pt-20 bg-[#FAFBFC]">
       <Helmet>
         <title>Contact Laboratory & Collaboration Inquiries | The Water Crew</title>
         <meta
@@ -32,18 +32,18 @@ export const ContactPage: React.FC = () => {
         />
       </Helmet>
 
-      {/* Header Banner */}
-      <section className="bg-gradient-to-b from-[#070D14] to-[#0E1A27] text-white py-16 sm:py-24 border-b border-slate-800">
+      {/* Clean White Page Header */}
+      <section className="bg-white py-16 sm:py-24 border-b border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <Badge variant="outline" className="mb-4 text-xs font-semibold text-cyan-300 border-cyan-500/30 bg-cyan-950/40">
-              <Mail className="w-3.5 h-3.5 text-[#00F0FF] mr-1.5" />
+            <Badge variant="outline" className="mb-4 text-xs font-semibold text-slate-700 bg-white">
+              <Mail className="w-3.5 h-3.5 text-[#076E73] mr-1.5" />
               INSTITUTIONAL LIAISON
             </Badge>
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
+            <OilSpillText as="h1" className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
               Contact & Collaboration
-            </h1>
-            <p className="mt-5 text-base sm:text-lg text-slate-300 leading-relaxed font-light">
+            </OilSpillText>
+            <p className="mt-5 text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
               Connect directly with our fluid dynamicists, robotics leads, and faculty advisor. We welcome inquiries from port authorities, clean ocean funds, and research collaborators worldwide.
             </p>
           </div>
@@ -68,7 +68,7 @@ export const ContactPage: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {FAQS.map((faq) => (
-              <Card key={faq.q} className="p-6 bg-white border-slate-200 shadow-2xs">
+              <Card key={faq.q} className="p-6 bg-white border-slate-200/90 shadow-2xs">
                 <h3 className="text-base font-bold text-slate-900 mb-2 leading-snug">
                   {faq.q}
                 </h3>

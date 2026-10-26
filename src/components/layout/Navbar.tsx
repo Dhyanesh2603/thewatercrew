@@ -20,7 +20,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInternship }) => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY
 
-      // Check if user is scrolled past top threshold
       if (currentScrollY > 20) {
         setIsScrolled(true)
       } else {
@@ -28,13 +27,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInternship }) => {
       }
 
       // Hide on scroll down, reveal on scroll up
-      // If mobile menu is open, do not auto-hide
       if (!mobileMenuOpen) {
         if (currentScrollY > lastScrollY.current && currentScrollY > 70) {
-          // Scrolling DOWN -> hide menu bar
           setIsHidden(true)
         } else if (currentScrollY < lastScrollY.current || currentScrollY <= 20) {
-          // Scrolling UP or at top -> reveal menu bar
           setIsHidden(false)
         }
       }
@@ -46,7 +42,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInternship }) => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [mobileMenuOpen])
 
-  // Close mobile menu on route change
   useEffect(() => {
     setMobileMenuOpen(false)
     setIsHidden(false)
@@ -56,35 +51,34 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInternship }) => {
     <header
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out',
-        // Darker shade to make the menu bar distinctly identifiable rather than blending with light background
-        'bg-[#070D14] border-b border-[#142334] text-white',
-        isScrolled ? 'shadow-[0_8px_30px_rgba(0,0,0,0.45)] py-3' : 'py-3.5 sm:py-4',
-        // Hide on scroll down
+        // Darker shade menu bar to make it distinctly identifiable
+        'bg-[#0B1520] border-b border-slate-800 text-white',
+        isScrolled ? 'shadow-md py-3' : 'py-3.5 sm:py-4',
         isHidden ? '-translate-y-full opacity-0 pointer-events-none' : 'translate-y-0 opacity-100'
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Brand Logo & Title (Left) */}
+          {/* Brand Logo & Title */}
           <Link
             to="/"
-            className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-cyan-500/40 rounded-lg p-1"
+            className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-emerald-500/40 rounded-lg p-1"
             aria-label="The water crew Home"
           >
-            <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden flex items-center justify-center transition-transform duration-300 group-hover:scale-105 border border-slate-700/80 bg-slate-900 shadow-md shrink-0">
+            <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden flex items-center justify-center transition-transform duration-300 group-hover:scale-105 border border-slate-700 bg-slate-900 shadow-xs shrink-0">
               <img
                 src="/logo.png"
                 alt="The water crew Logo"
                 className="w-full h-full object-cover"
               />
             </div>
-            <span className="text-base sm:text-lg font-bold tracking-tight text-white group-hover:text-[#00F0FF] transition-colors oil-spill-hover">
+            <span className="text-base sm:text-lg font-bold tracking-tight text-white group-hover:text-emerald-400 transition-colors oil-spill-hover">
               The water crew
             </span>
           </Link>
 
-          {/* Desktop Navigation Links (Right - matching reference website) */}
-          <nav className="hidden md:flex items-center gap-1.5 lg:gap-3" aria-label="Main Navigation">
+          {/* Desktop Navigation Links */}
+          <nav className="hidden md:flex items-center gap-1.5 lg:gap-2.5" aria-label="Main Navigation">
             {NAV_ITEMS.map((item) => {
               const isActive =
                 item.href === '/'
@@ -96,19 +90,19 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInternship }) => {
                   key={item.label}
                   to={item.href}
                   className={cn(
-                    'px-3 lg:px-3.5 py-1.5 text-xs lg:text-sm font-bold uppercase tracking-wider rounded-lg transition-all duration-200 relative group/link',
+                    'px-3 lg:px-3.5 py-1.5 text-xs lg:text-sm font-semibold uppercase tracking-wider rounded-lg transition-colors relative',
                     isActive
-                      ? 'text-[#00F0FF] bg-cyan-950/40 border border-cyan-500/30 shadow-[0_0_15px_rgba(0,240,255,0.15)]'
-                      : 'text-slate-200 hover:text-[#00F0FF] hover:bg-slate-800/60'
+                      ? 'text-white font-bold bg-white/10'
+                      : 'text-slate-300 hover:text-white hover:bg-white/5'
                   )}
                 >
                   <span className="relative z-10">{item.label}</span>
 
-                  {/* Active bottom glow bar */}
+                  {/* Clean flat indicator without glowing effects */}
                   {isActive && (
                     <motion.div
-                      layoutId="activeDarkNavIndicator"
-                      className="absolute bottom-0 left-2 right-2 h-0.5 bg-[#00F0FF] rounded-full shadow-[0_0_8px_#00F0FF]"
+                      layoutId="activeNavIndicatorClean"
+                      className="absolute bottom-0 left-2 right-2 h-0.5 bg-[#076E73] rounded-full"
                       transition={{ type: 'spring', stiffness: 400, damping: 30 }}
                     />
                   )}
@@ -116,13 +110,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInternship }) => {
               )
             })}
 
-            {/* Quick Action Button */}
+            {/* Simple Green Action Button (No glow, no cyberpunk styling) */}
             {onOpenInternship && (
               <div className="ml-2 pl-2 border-l border-slate-800">
                 <button
                   type="button"
                   onClick={onOpenInternship}
-                  className="px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider rounded-lg transition-all duration-200 bg-[#076E73] text-white hover:bg-[#0aa3ab] hover:shadow-[0_0_15px_rgba(7,110,115,0.4)] flex items-center gap-1 cursor-pointer"
+                  className="px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider rounded-lg transition-colors bg-[#076E73] hover:bg-[#065A5E] text-white shadow-2xs flex items-center gap-1 cursor-pointer"
                 >
                   <span>Apply</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
@@ -154,7 +148,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInternship }) => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: 'easeInOut' }}
-            className="md:hidden bg-[#070D14] border-b border-slate-800 shadow-2xl px-5 py-6 mt-3 max-h-[85vh] overflow-y-auto"
+            className="md:hidden bg-[#0B1520] border-b border-slate-800 shadow-xl px-5 py-6 mt-3 max-h-[85vh] overflow-y-auto"
           >
             <div className="space-y-2">
               {NAV_ITEMS.map((item) => {
@@ -169,10 +163,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInternship }) => {
                     to={item.href}
                     onClick={() => setMobileMenuOpen(false)}
                     className={cn(
-                      'block px-4 py-3 text-sm font-bold uppercase tracking-wider rounded-xl transition-colors',
+                      'block px-4 py-3 text-sm font-semibold uppercase tracking-wider rounded-xl transition-colors',
                       isActive
-                        ? 'bg-cyan-950/60 text-[#00F0FF] border border-cyan-500/30'
-                        : 'text-slate-200 hover:text-[#00F0FF] hover:bg-slate-800/80'
+                        ? 'bg-white/10 text-white font-bold'
+                        : 'text-slate-300 hover:text-white hover:bg-white/5'
                     )}
                   >
                     {item.label}
@@ -188,7 +182,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInternship }) => {
                       setMobileMenuOpen(false)
                       onOpenInternship()
                     }}
-                    className="w-full py-3 bg-[#076E73] text-white text-xs font-bold uppercase tracking-wider rounded-xl hover:bg-[#0aa3ab] transition-colors shadow-sm flex items-center justify-center gap-1.5 cursor-pointer"
+                    className="w-full py-3 bg-[#076E73] hover:bg-[#065A5E] text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-colors shadow-2xs flex items-center justify-center gap-1.5 cursor-pointer"
                   >
                     <span>Apply for Internship</span>
                     <ArrowUpRight className="w-4 h-4" />
