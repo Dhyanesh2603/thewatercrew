@@ -24,14 +24,14 @@ export const Footer: React.FC = () => {
                 <img src="/logo.png" alt="The water crew" className="w-full h-full object-cover" />
               </div>
 
-              <div className="flex items-center gap-2 sm:gap-2.5">
+              <div className="flex items-center">
                 <span className="text-base sm:text-lg font-bold tracking-tight text-[#0B2A3C] select-none whitespace-nowrap">
                   The water crew
                 </span>
 
-                {/* VIT Logo beside the text */}
-                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full overflow-hidden flex items-center justify-center bg-white border border-slate-300 p-0.5 shadow-xs shrink-0">
-                  <img src="/vit-logo.png" alt="Vellore Institute of Technology" className="w-full h-full object-contain" />
+                {/* VIT Logo beside the text with 1cm space */}
+                <div className="ml-[1cm] h-7 sm:h-8 px-2 py-0.5 rounded-md overflow-hidden flex items-center justify-center bg-white border border-slate-300 shadow-xs shrink-0">
+                  <img src="/vit-logo.png" alt="Vellore Institute of Technology" className="h-full w-auto object-contain" />
                 </div>
               </div>
             </Link>

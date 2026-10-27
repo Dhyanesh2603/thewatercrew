@@ -6,6 +6,7 @@ import { fadeInUp, easeEngineering } from '@/animations/motionVariants'
 import { Card, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { OilSpillText } from '@/components/ui/OilSpillText'
+import { FlumeLabSchematic } from '@/components/schematics/TechnicalSchematics'
 
 export const StartupSection: React.FC = () => {
   return (
@@ -34,28 +35,9 @@ export const StartupSection: React.FC = () => {
             viewport={{ once: true, margin: '-80px' }}
             className="lg:col-span-5 space-y-6"
           >
-            {/* Architectural Lab Image with Asymmetric Floating Caption */}
-            <div className="relative rounded-3xl overflow-hidden bg-slate-100 border border-slate-200/90 shadow-sm aspect-[4/3] group">
-              <img
-                src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80"
-                alt="Marine Hydrodynamics Laboratory"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-104"
-              />
-
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
-
-              {/* Lab Badge */}
-              <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md rounded-2xl p-3.5 border border-slate-200 shadow-xs">
-                <span className="text-[10px] uppercase font-bold tracking-wider text-slate-400 block">
-                  Research Base
-                </span>
-                <span className="text-xs font-bold text-slate-900 block">
-                  Center for Multiphase Fluid Mechanics
-                </span>
-                <span className="text-[11px] text-[#076E73] font-mono font-semibold">
-                  VIT Vellore Campus
-                </span>
-              </div>
+            {/* Architectural Lab Schematic */}
+            <div className="relative rounded-3xl overflow-hidden bg-slate-950 border border-slate-700/80 shadow-sm aspect-[4/3] group">
+              <FlumeLabSchematic className="w-full h-full" />
             </div>
 
             {/* Core Directives Box */}

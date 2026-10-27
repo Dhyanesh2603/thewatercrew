@@ -6,6 +6,24 @@ import { easeEngineering } from '@/animations/motionVariants'
 import { Badge } from '@/components/ui/badge'
 import { OilSpillText } from '@/components/ui/OilSpillText'
 import { cn } from '@/utils/cn'
+import {
+  FlumeLabSchematic,
+  CncMachiningSchematic,
+  TelemetrySchematic,
+} from '@/components/schematics/TechnicalSchematics'
+
+const renderFacilityVisual = (id: string, className?: string) => {
+  switch (id) {
+    case 'fluid-mechanics-lab':
+      return <FlumeLabSchematic className={className} />
+    case 'prototype-machining-cell':
+      return <CncMachiningSchematic className={className} />
+    case 'telemetry-bench':
+      return <TelemetrySchematic className={className} />
+    default:
+      return <FlumeLabSchematic className={className} />
+  }
+}
 
 export const ResearchSection: React.FC = () => {
   return (
@@ -49,13 +67,8 @@ export const ResearchSection: React.FC = () => {
                     isEven ? 'lg:order-1' : 'lg:order-2'
                   )}
                 >
-                  <div className="relative rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 shadow-sm aspect-[16/10]">
-                    <img
-                      src={facility.image}
-                      alt={facility.title}
-                      loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
+                  <div className="relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-700/80 shadow-sm aspect-[16/10]">
+                    {renderFacilityVisual(facility.id, 'w-full h-full')}
 
                     {/* Facility Badge */}
                     <div className="absolute top-4 left-4">

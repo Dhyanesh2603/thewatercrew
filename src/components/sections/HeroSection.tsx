@@ -5,6 +5,7 @@ import { ArrowRight, ArrowDown } from 'lucide-react'
 import { easeEngineering } from '@/animations/motionVariants'
 import { Button } from '@/components/ui/button'
 import { OilSpillText } from '@/components/ui/OilSpillText'
+import { SkimmerSchematic } from '@/components/schematics/TechnicalSchematics'
 
 export const HeroSection: React.FC = () => {
   const handleScrollTo = (targetId: string) => {
@@ -117,35 +118,8 @@ export const HeroSection: React.FC = () => {
             className="lg:col-span-6 xl:col-span-6 relative w-full"
           >
             {/* Architectural Frame with Offset Shadow */}
-            <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-slate-100 border border-slate-200/90 shadow-md sm:shadow-xl aspect-[4/3] sm:aspect-[16/11] lg:aspect-[5/4] group w-full">
-              <img
-                src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1400&q=80"
-                alt="Marine Hydrodynamics Skimmer Surface Vessel"
-                className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-103"
-              />
-
-              {/* Light Clean Framing Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
-
-              {/* Asymmetrical Top-Right Technical Specification Tag */}
-              <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-white/95 backdrop-blur-md px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-lg sm:rounded-xl border border-slate-200/90 shadow-2xs text-left">
-                <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider text-slate-400 block">
-                  Vessel Spec
-                </span>
-                <span className="text-[11px] sm:text-xs font-mono font-bold text-[#0B2A3C]">
-                  MK-2 Catamaran
-                </span>
-              </div>
-
-              {/* Asymmetrical Bottom-Left Cover Caption */}
-              <div className="absolute bottom-4 left-4 right-4 sm:bottom-5 sm:left-5 sm:right-5 text-white">
-                <span className="text-[9px] sm:text-[10px] uppercase font-mono tracking-widest text-slate-300 block mb-0.5">
-                  Center for Multiphase Fluid Mechanics
-                </span>
-                <h3 className="text-sm sm:text-lg font-bold text-white tracking-tight leading-snug">
-                  Hydrodynamic Wave Flume & Rapid Mechanical Recovery
-                </h3>
-              </div>
+            <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-slate-950 border border-slate-700/80 shadow-md sm:shadow-xl aspect-[4/3] sm:aspect-[16/11] lg:aspect-[5/4] group w-full">
+              <SkimmerSchematic className="w-full h-full" />
             </div>
 
             {/* Asymmetric Offset Floating Accent Pill */}

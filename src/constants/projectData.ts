@@ -85,7 +85,7 @@ export const RESEARCH_FACILITIES: ResearchFacility[] = [
       'Automated water salinity and temperature regulation',
     ],
     image:
-      'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80',
+      '',
     badge: 'Hydrodynamics Testing Facility',
     metricLabel: 'Testing Volume',
     metricValue: '12m Wave Flume',
@@ -103,7 +103,7 @@ export const RESEARCH_FACILITIES: ResearchFacility[] = [
       '3D additive manufacturing for custom fluid scrapers',
     ],
     image:
-      'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=1200&q=80',
+      '',
     badge: 'Precision Fabrication',
     metricLabel: 'Machining Tolerance',
     metricValue: '± 0.02 mm',
@@ -121,7 +121,7 @@ export const RESEARCH_FACILITIES: ResearchFacility[] = [
       'IP68 sealed environmental testing chambers',
     ],
     image:
-      'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80',
+      '',
     badge: 'Instrumentation Lab',
     metricLabel: 'Telemetry Latency',
     metricValue: '< 120 ms',
@@ -313,7 +313,7 @@ export const PRODUCTS_LIST: ProductSpec[] = [
       'Solar-assist battery backup for extended deployment',
     ],
     image:
-      'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1000&q=80',
+      '',
     technicalDetails: {
       recoveryRate: '1,800 Liters / Hour nominal',
       viscosityRange: '5 to 50,000 cSt (Diesel to Emulsified Bunker C)',
@@ -342,7 +342,7 @@ export const PRODUCTS_LIST: ProductSpec[] = [
       'Integrated retroreflective marine safety beacons',
     ],
     image:
-      'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80',
+      '',
     technicalDetails: {
       recoveryRate: 'Continuous boundary diversion',
       viscosityRange: 'All surface hydrocarbon types',
@@ -371,7 +371,7 @@ export const PRODUCTS_LIST: ProductSpec[] = [
       'Hermetically sealed IP68 marine polycarbonate shell',
     ],
     image:
-      'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80',
+      '',
     technicalDetails: {
       recoveryRate: 'Monitoring & perimeter tracing',
       viscosityRange: 'Spectral fluorescence detection',
@@ -389,7 +389,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     description:
       '12-meter recirculating water flume at VIT testing laminar intake profile under simulated surface chop.',
     image:
-      'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=900&q=80',
+      '',
     date: 'VIT Vellore Lab',
     aspectRatio: 'wide',
   },
@@ -400,7 +400,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     description:
       'Fabrication of custom spiral grooved oleophilic discs from lightweight engineering polymers.',
     image:
-      'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=900&q=80',
+      '',
     date: 'Mechanical Prototyping Cell',
     aspectRatio: 'square',
   },
@@ -411,7 +411,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     description:
       'Chassis integration of twin marine alloy 5083 pontoons and motor drive transmission.',
     image:
-      'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=900&q=80',
+      '',
     date: 'Assembly Bay',
     aspectRatio: 'tall',
   },
@@ -422,7 +422,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     description:
       'Calibrating fluid scraper clearance against weathered crude surrogate mixtures.',
     image:
-      'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=900&q=80',
+      '',
     date: 'Chemistry & Fluids Lab',
     aspectRatio: 'square',
   },
@@ -433,7 +433,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     description:
       'Hardware-in-the-loop validation of slick thickness optical sensors and LoRa telemetry.',
     image:
-      'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80',
+      '',
     date: 'Electronics Lab',
     aspectRatio: 'tall',
   },
@@ -444,7 +444,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     description:
       'Real-time continuous measurement of recovery volume and pure oil fraction extraction.',
     image:
-      'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80',
+      '',
     date: 'Hydrodynamic Channel',
     aspectRatio: 'wide',
   },

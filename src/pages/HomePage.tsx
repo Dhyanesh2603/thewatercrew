@@ -6,7 +6,6 @@ import { HeroSection } from '@/components/sections/HeroSection'
 import { StartupSection } from '@/components/sections/StartupSection'
 import { ProductsSection } from '@/components/sections/ProductsSection'
 import { ProjectTimelineSection } from '@/components/sections/ProjectTimelineSection'
-import { GallerySection } from '@/components/sections/GallerySection'
 import { OilSpillText } from '@/components/ui/OilSpillText'
 import { Badge } from '@/components/ui/badge'
 
@@ -144,9 +143,6 @@ export const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* 6. Photo Gallery */}
-      <GallerySection />
     </main>
   )
 }

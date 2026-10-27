@@ -8,6 +8,24 @@ import { Badge } from '@/components/ui/badge'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { OilSpillText } from '@/components/ui/OilSpillText'
+import {
+  SkimmerSchematic,
+  BarrierSchematic,
+  TelemetrySchematic,
+} from '@/components/schematics/TechnicalSchematics'
+
+const renderProductVisual = (id: string, className?: string) => {
+  switch (id) {
+    case 'skimmer-alpha':
+      return <SkimmerSchematic className={className} />
+    case 'micro-boom':
+      return <BarrierSchematic className={className} />
+    case 'telemetry-array':
+      return <TelemetrySchematic className={className} />
+    default:
+      return <SkimmerSchematic className={className} />
+  }
+}
 
 export const ProductsSection: React.FC = () => {
   const [activeModalProduct, setActiveModalProduct] = useState<ProductSpec | null>(null)
@@ -43,13 +61,9 @@ export const ProductsSection: React.FC = () => {
             className="lg:col-span-7"
           >
             <Card className="overflow-hidden bg-white hover:shadow-lg transition-all duration-300">
-              {/* Large Cover Photo */}
-              <div className="relative aspect-[16/10] bg-slate-100 overflow-hidden">
-                <img
-                  src={flagshipProduct.image}
-                  alt={flagshipProduct.name}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-104"
-                />
+              {/* Large Engineering Schematic */}
+              <div className="relative aspect-[16/10] bg-slate-950 overflow-hidden">
+                {renderProductVisual(flagshipProduct.id, 'w-full h-full')}
                 <div className="absolute top-4 left-4">
                   <span className="px-3 py-1 bg-white/95 backdrop-blur-md text-xs font-bold text-slate-900 rounded-lg shadow-xs">
                     Flagship Surface Vessel
@@ -133,12 +147,8 @@ export const ProductsSection: React.FC = () => {
                 transition={{ duration: 0.5, delay: idx * 0.12, ease: easeEngineering }}
               >
                 <Card className="overflow-hidden bg-white hover:shadow-md transition-shadow">
-                  <div className="relative aspect-[16/9] bg-slate-100 overflow-hidden">
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-103"
-                    />
+                  <div className="relative aspect-[16/9] bg-slate-950 overflow-hidden">
+                    {renderProductVisual(product.id, 'w-full h-full')}
                     <div className="absolute top-3 left-3">
                       <span className="px-2.5 py-0.5 bg-white/95 backdrop-blur-md text-[10px] font-bold text-slate-900 rounded-md shadow-2xs">
                         {product.category}

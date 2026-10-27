@@ -74,17 +74,17 @@ export const Navbar: React.FC<NavbarProps> = () => {
               />
             </div>
 
-            <div className="flex items-center gap-2 sm:gap-2.5">
+            <div className="flex items-center">
               <span className="text-base sm:text-lg font-bold tracking-tight text-white select-none whitespace-nowrap">
                 The water crew
               </span>
 
-              {/* VIT Logo placed directly beside the text */}
-              <div className="relative w-7 h-7 sm:w-8 sm:h-8 rounded-full overflow-hidden flex items-center justify-center border border-white/20 bg-white p-0.5 shadow-xs shrink-0">
+              {/* VIT Logo placed directly beside the text with 1cm space */}
+              <div className="ml-[1cm] relative h-7 sm:h-8 px-2 py-0.5 rounded-md overflow-hidden flex items-center justify-center border border-white/20 bg-white shadow-xs shrink-0">
                 <img
                   src="/vit-logo.png"
                   alt="Vellore Institute of Technology Logo"
-                  className="w-full h-full object-contain"
+                  className="h-full w-auto object-contain"
                 />
               </div>
             </div>
