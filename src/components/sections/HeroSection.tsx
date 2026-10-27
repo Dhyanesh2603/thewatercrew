@@ -37,11 +37,11 @@ export const HeroSection: React.FC = () => {
             <div className="flex flex-wrap items-center gap-2">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-50 border border-sky-200 text-xs font-semibold text-[#076E73]">
                 <Sparkles className="w-3.5 h-3.5" />
-                ZIF-8 MOF Sponge Technology
+                Advanced Hydrophobic Sponge Technology
               </span>
               <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-700">
                 <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-                Patent / Design Registered (IP India)
+                TRL 5 Prototyping Stage
               </span>
             </div>
 
@@ -53,7 +53,7 @@ export const HeroSection: React.FC = () => {
               className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.12] text-slate-900 break-words"
             >
               <OilSpillText className="block">
-                Intelligent MOF Sponge for Selective Oil Recovery
+                Autonomous Hydrophobic Skimmer for Selective Oil Recovery
               </OilSpillText>
               <span className="text-xl sm:text-2xl lg:text-3xl font-semibold text-[#076E73] block mt-1">
                 and Sustainable Biodiesel Production
@@ -67,7 +67,7 @@ export const HeroSection: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.16, ease: easeEngineering }}
               className="text-sm sm:text-base lg:text-lg text-slate-600 max-w-lg font-normal leading-relaxed"
             >
-              A patent-protected marine clean-tech innovation engineered at the Vellore Institute of Technology. Integrating superhydrophobic ZIF-8 Metal-Organic Framework sponges, vacuum suction extraction, and real-time AI & IoT telemetry for pure hydrocarbon recovery.
+              A deep-tech marine clean-tech innovation engineered at the Vellore Institute of Technology. Integrating superhydrophobic recovery sponges, continuous vacuum extraction, and real-time AI & IoT telemetry for pure hydrocarbon recovery.
             </motion.p>
 
             {/* Action Buttons */}
@@ -172,7 +172,7 @@ export const HeroSection: React.FC = () => {
                 <div className="relative w-full h-full">
                   <img
                     src="/hero-mof-skimmer.jpg"
-                    alt="Intelligent MOF Sponge Skimmer Operating on Marine Oil Spill"
+                    alt="Autonomous Hydrophobic Skimmer Operating on Marine Oil Spill"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
@@ -183,7 +183,7 @@ export const HeroSection: React.FC = () => {
                       Autonomous Vessel
                     </span>
                     <span className="text-xs font-mono font-bold text-[#0B2A3C]">
-                      MOF Skimmer Pod
+                      Surface Skimmer Pod
                     </span>
                   </div>
 
@@ -193,7 +193,7 @@ export const HeroSection: React.FC = () => {
                       Vellore Institute of Technology · CO2 RGTC
                     </span>
                     <h3 className="text-sm sm:text-base font-bold text-white tracking-tight leading-snug">
-                      Selective Hydrocarbon Uptake via ZIF-8 Nanocrystal Sponge Matrix
+                      High-Selectivity Hydrocarbon Uptake via Superhydrophobic Surface Matrix
                     </h3>
                   </div>
                 </div>

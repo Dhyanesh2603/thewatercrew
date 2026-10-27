@@ -17,20 +17,20 @@ const renderProductVisual = (id: string, className?: string) => {
   switch (id) {
     case 'skimmer-alpha':
       return (
-        <div className={`relative w-full h-full bg-[#F8FAFC] flex items-center justify-center p-2 ${className}`}>
+        <div className={`relative w-full h-full bg-slate-950 overflow-hidden ${className}`}>
           <img
-            src="/startup-assets/slide_16_skimmer_cad_design.png"
-            alt="3D CAD Design of Autonomous MOF Skimmer"
-            className="w-full h-full object-contain rounded-xl"
+            src="/hero-mof-skimmer.jpg"
+            alt="Autonomous Hydrophobic Skimmer Surface Vessel"
+            className="w-full h-full object-cover"
           />
         </div>
       )
     case 'micro-boom':
       return (
-        <div className={`relative w-full h-full bg-slate-950 overflow-hidden ${className}`}>
+        <div className={`relative w-full h-full bg-slate-900 overflow-hidden ${className}`}>
           <img
-            src="/startup-assets/mof_sem_analysis.png"
-            alt="SEM Microstructural Analysis of ZIF-8 Sponge"
+            src="/startup-assets/mof_lab_petridish_test.png"
+            alt="Selective Hydrocarbon Absorption Trial"
             className="w-full h-full object-cover"
           />
         </div>

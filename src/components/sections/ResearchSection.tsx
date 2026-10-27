@@ -19,11 +19,11 @@ const renderFacilityVisual = (id: string, className?: string) => {
       return <CncMachiningSchematic className={className} />
     case 'telemetry-bench':
       return (
-        <div className={`relative w-full h-full bg-slate-950 overflow-hidden flex items-center justify-center p-3 ${className}`}>
+        <div className={`relative w-full h-full bg-slate-950 overflow-hidden flex items-center justify-center ${className}`}>
           <img
-            src="/startup-assets/mof_zif8_structure.png"
-            alt="ZIF-8 Metal Organic Framework Nanocrystal Model"
-            className="w-full h-full object-contain"
+            src="/startup-assets/mof_lab_petridish_test.png"
+            alt="Laboratory Hydrocarbon Separation Test"
+            className="w-full h-full object-cover"
           />
         </div>
       )

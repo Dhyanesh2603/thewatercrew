@@ -6,6 +6,7 @@ import { fadeInUp } from '@/animations/motionVariants'
 import { Card, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { OilSpillText } from '@/components/ui/OilSpillText'
+import { SkimmerSchematic } from '@/components/schematics/TechnicalSchematics'
 
 export const StartupSection: React.FC = () => {
   return (
@@ -21,7 +22,7 @@ export const StartupSection: React.FC = () => {
             Bridging Laboratory Science and Real-World Ocean Protection
           </OilSpillText>
           <p className="mt-4 text-base text-slate-600 leading-relaxed max-w-xl">
-            Originating from research laboratories at {STARTUP_META.institution}, The Water Crew develops autonomous hardware systems engineered with hydrophobic MOF sponges to recover marine hydrocarbon spills at the boundary layer without secondary water collection.
+            Originating from research laboratories at {STARTUP_META.institution}, The Water Crew develops autonomous hardware systems engineered with advanced hydrophobic sponges to recover marine hydrocarbon spills at the boundary layer without secondary water collection.
           </p>
         </div>
 
@@ -35,16 +36,12 @@ export const StartupSection: React.FC = () => {
             viewport={{ once: true, margin: '-80px' }}
             className="lg:col-span-5 space-y-6"
           >
-            {/* 3D CAD Skimmer Design Showcase from Presentation Slide 16 */}
-            <div className="relative rounded-3xl overflow-hidden bg-white border border-slate-200/90 shadow-sm aspect-[4/3] group p-2">
-              <img
-                src="/startup-assets/slide_16_skimmer_cad_design.png"
-                alt="3D CAD Design of Autonomous MOF Skimmer with Intellectual Property India Registration"
-                className="w-full h-full object-contain rounded-2xl"
-              />
-              <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-lg border border-slate-200 shadow-2xs">
+            {/* Architectural Skimmer Design Showcase */}
+            <div className="relative rounded-3xl overflow-hidden bg-slate-950 border border-slate-700/80 shadow-sm aspect-[4/3] group">
+              <SkimmerSchematic className="w-full h-full" />
+              <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-lg border border-slate-200 shadow-2xs z-20">
                 <span className="text-[10px] font-mono font-bold text-[#076E73]">
-                  Design Filed · IP India
+                  TRL 5 Physical Stage
                 </span>
               </div>
             </div>
@@ -56,7 +53,7 @@ export const StartupSection: React.FC = () => {
                 The Core Thesis
               </span>
               <p className="text-sm text-slate-700 leading-relaxed italic">
-                “Conventional skimmers pull in massive amounts of water, consuming high operational energy and requiring expensive onshore separation. Our ZIF-8 hydrophobic MOF sponge repels water entirely, capturing pure hydrocarbons that feed directly into clean biodiesel synthesis.”
+                “Conventional skimmers pull in massive amounts of water, consuming high operational energy and requiring expensive onshore separation. Our advanced hydrophobic sponge repels water entirely, capturing pure hydrocarbons that feed directly into clean biodiesel synthesis.”
               </p>
               <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-medium">
                 <span>The Water Crew · VIT</span>

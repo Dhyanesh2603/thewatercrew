@@ -11,12 +11,12 @@ import { Card } from '@/components/ui/card'
 const PUBLICATIONS = [
   {
     id: 'pub-1',
-    title: 'Superhydrophobic and Superoleophilic ZIF-8 Metal-Organic Framework Sponges for Selective Hydrocarbon Separation',
+    title: 'Advanced Superhydrophobic and Superoleophilic Sponge Matrices for Selective Hydrocarbon Separation',
     venue: 'Journal of Materials Chemistry & Environmental Biotechnology',
     year: '2025',
     type: 'Research Article',
     doi: '10.1016/j.jmaterchem.2025.10928',
-    abstract: 'Synthesis and surface modification of porous sponge substrates with crystalline ZIF-8 nanocrystal cages, demonstrating contact angles >150° and 100% selective absorption of crude oil surrogates in saline waters.',
+    abstract: 'Surface functionalization of porous sponge substrates demonstrating contact angles >150° and selective absorption of crude oil surrogates in saline waters with multi-cycle mechanical reusability.',
   },
   {
     id: 'pub-2',
@@ -25,7 +25,7 @@ const PUBLICATIONS = [
     year: '2025',
     type: 'Conference Proceeding',
     doi: '10.1109/OCEANS.2025.98124',
-    abstract: 'Design and laboratory flume benchmark of an aerodynamic skimmer pod equipped with rotating MOF rollers, wiper scrapers, and vacuum extraction for zero-water hydrocarbon intake.',
+    abstract: 'Design and laboratory flume benchmark of an aerodynamic skimmer pod equipped with rotating hydrophobic rollers, wiper scrapers, and vacuum extraction for zero-water hydrocarbon intake.',
   },
   {
     id: 'pub-3',

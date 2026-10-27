@@ -32,7 +32,7 @@ export const HomePage: React.FC = () => {
       {/* 2. Foundation & About Startup */}
       <StartupSection />
 
-      {/* 3. Core Scientific Innovation: MOF Sponge Technology */}
+      {/* 3. Advanced Recovery Technology */}
       <SpongeTechnologySection />
 
       {/* 4. Products & Hardware Prototype */}

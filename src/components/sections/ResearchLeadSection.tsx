@@ -17,7 +17,7 @@ export const ResearchLeadSection: React.FC = () => {
             Academic Governance & Research Direction
           </h2>
           <p className="mt-3 text-base sm:text-lg text-slate-600 leading-relaxed">
-            Every interfacial surface geometry, ZIF-8 Metal-Organic Framework nanocomposite, and vacuum extraction mechanism is grounded in rigorous peer-reviewed science at {RESEARCH_LEAD_DATA.institution}.
+            Every interfacial surface geometry, advanced hydrophobic matrix, and vacuum extraction mechanism is grounded in rigorous peer-reviewed science at {RESEARCH_LEAD_DATA.institution}.
           </p>
         </div>
 
@@ -41,7 +41,7 @@ export const ResearchLeadSection: React.FC = () => {
                 <div className="relative aspect-[16/10] bg-slate-900 overflow-hidden">
                   <img
                     src="/startup-assets/mof_lab_petridish_test.png"
-                    alt="Laboratory MOF Sponge Selective Oil Absorption Trial"
+                    alt="Laboratory Selective Oil Absorption Trial"
                     className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
@@ -67,7 +67,7 @@ export const ResearchLeadSection: React.FC = () => {
                 <div className="p-3.5 bg-slate-50 border-t border-slate-100 flex items-center justify-between text-xs">
                   <span className="text-slate-600 flex items-center gap-1.5 font-medium">
                     <FlaskConical className="w-3.5 h-3.5 text-[#076E73]" />
-                    ZIF-8 Hydrophobic MOF Sponge
+                    Advanced Hydrophobic Matrix
                   </span>
                   <span className="text-[11px] font-mono font-bold text-[#076E73]">
                     100% Oil Selective
