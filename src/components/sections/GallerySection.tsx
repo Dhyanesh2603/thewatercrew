@@ -18,7 +18,7 @@ export const GallerySection: React.FC = () => {
 
   const filteredItems = activeCategory === 'All'
     ? GALLERY_ITEMS
-    : GALLERY_ITEMS.filter((item) => item.category === activeCategory)
+    : GALLERY_ITEMS.filter((item: GalleryItem) => item.category === activeCategory)
 
   // Asymmetrical column and aspect ratio mapping
   const getAsymmetricClass = (index: number) => {
@@ -84,7 +84,7 @@ export const GallerySection: React.FC = () => {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-6"
         >
           <AnimatePresence>
-            {filteredItems.map((item, idx) => (
+            {filteredItems.map((item: GalleryItem, idx: number) => (
               <motion.div
                 key={item.id}
                 layout

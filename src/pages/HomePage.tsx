@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async'
 import { ArrowRight, Microscope, Users, UserPlus, Mail } from 'lucide-react'
 import { HeroSection } from '@/components/sections/HeroSection'
 import { StartupSection } from '@/components/sections/StartupSection'
+import { SpongeTechnologySection } from '@/components/sections/SpongeTechnologySection'
 import { ProductsSection } from '@/components/sections/ProductsSection'
 import { ProjectTimelineSection } from '@/components/sections/ProjectTimelineSection'
 import { OilSpillText } from '@/components/ui/OilSpillText'
@@ -31,7 +32,10 @@ export const HomePage: React.FC = () => {
       {/* 2. Foundation & About Startup */}
       <StartupSection />
 
-      {/* 3. Products & Hardware Prototype */}
+      {/* 3. Core Scientific Innovation: MOF Sponge Technology */}
+      <SpongeTechnologySection />
+
+      {/* 4. Products & Hardware Prototype */}
       <ProductsSection />
 
       {/* 4. Project Timeline & Milestones */}

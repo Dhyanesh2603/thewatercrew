@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { Users, ArrowRight, Compass } from 'lucide-react'
 import { TeamSection } from '@/components/sections/TeamSection'
+import { ResearchLeadSection } from '@/components/sections/ResearchLeadSection'
 import { Badge } from '@/components/ui/badge'
 import { Card } from '@/components/ui/card'
 import { OilSpillText } from '@/components/ui/OilSpillText'
@@ -56,6 +57,9 @@ export const TeamPage: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Faculty Profile Section (Featured Layout) */}
+      <ResearchLeadSection />
 
       {/* Core Team Section */}
       <TeamSection />

@@ -10,16 +10,31 @@ import { Button } from '@/components/ui/button'
 import { OilSpillText } from '@/components/ui/OilSpillText'
 import {
   SkimmerSchematic,
-  BarrierSchematic,
   TelemetrySchematic,
 } from '@/components/schematics/TechnicalSchematics'
 
 const renderProductVisual = (id: string, className?: string) => {
   switch (id) {
     case 'skimmer-alpha':
-      return <SkimmerSchematic className={className} />
+      return (
+        <div className={`relative w-full h-full bg-[#F8FAFC] flex items-center justify-center p-2 ${className}`}>
+          <img
+            src="/startup-assets/slide_16_skimmer_cad_design.png"
+            alt="3D CAD Design of Autonomous MOF Skimmer"
+            className="w-full h-full object-contain rounded-xl"
+          />
+        </div>
+      )
     case 'micro-boom':
-      return <BarrierSchematic className={className} />
+      return (
+        <div className={`relative w-full h-full bg-slate-950 overflow-hidden ${className}`}>
+          <img
+            src="/startup-assets/mof_sem_analysis.png"
+            alt="SEM Microstructural Analysis of ZIF-8 Sponge"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      )
     case 'telemetry-array':
       return <TelemetrySchematic className={className} />
     default:

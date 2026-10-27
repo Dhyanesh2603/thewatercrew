@@ -9,7 +9,6 @@ import { cn } from '@/utils/cn'
 import {
   FlumeLabSchematic,
   CncMachiningSchematic,
-  TelemetrySchematic,
 } from '@/components/schematics/TechnicalSchematics'
 
 const renderFacilityVisual = (id: string, className?: string) => {
@@ -19,7 +18,15 @@ const renderFacilityVisual = (id: string, className?: string) => {
     case 'prototype-machining-cell':
       return <CncMachiningSchematic className={className} />
     case 'telemetry-bench':
-      return <TelemetrySchematic className={className} />
+      return (
+        <div className={`relative w-full h-full bg-slate-950 overflow-hidden flex items-center justify-center p-3 ${className}`}>
+          <img
+            src="/startup-assets/mof_zif8_structure.png"
+            alt="ZIF-8 Metal Organic Framework Nanocrystal Model"
+            className="w-full h-full object-contain"
+          />
+        </div>
+      )
     default:
       return <FlumeLabSchematic className={className} />
   }
