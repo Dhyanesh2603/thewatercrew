@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowRight, ArrowDown, ShieldCheck, Sparkles, Cpu } from 'lucide-react'
+import { ArrowRight, ArrowDown } from 'lucide-react'
 import { easeEngineering } from '@/animations/motionVariants'
 import { Button } from '@/components/ui/button'
 import { OilSpillText } from '@/components/ui/OilSpillText'
@@ -33,18 +33,6 @@ export const HeroSection: React.FC = () => {
           {/* Left Column: Tightly constrained, asymmetric editorial typography */}
           <div className="lg:col-span-6 xl:col-span-6 space-y-5 sm:space-y-6 text-left pr-0 lg:pr-4">
             
-            {/* Top Badges */}
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-50 border border-sky-200 text-xs font-semibold text-[#076E73]">
-                <Sparkles className="w-3.5 h-3.5" />
-                Advanced Hydrophobic Sponge Technology
-              </span>
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-700">
-                <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-                TRL 5 Prototyping Stage
-              </span>
-            </div>
-
             {/* Asymmetrical Big Headline */}
             <motion.h1
               initial={{ opacity: 0, y: 24 }}
@@ -53,7 +41,7 @@ export const HeroSection: React.FC = () => {
               className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.12] text-slate-900 break-words"
             >
               <OilSpillText className="block">
-                Autonomous Hydrophobic Skimmer for Selective Oil Recovery
+                Autonomous Surface Skimmer for Selective Oil Recovery
               </OilSpillText>
               <span className="text-xl sm:text-2xl lg:text-3xl font-semibold text-[#076E73] block mt-1">
                 and Sustainable Biodiesel Production
@@ -67,7 +55,7 @@ export const HeroSection: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.16, ease: easeEngineering }}
               className="text-sm sm:text-base lg:text-lg text-slate-600 max-w-lg font-normal leading-relaxed"
             >
-              A deep-tech marine clean-tech innovation engineered at the Vellore Institute of Technology. Integrating superhydrophobic recovery sponges, continuous vacuum extraction, and real-time AI & IoT telemetry for pure hydrocarbon recovery.
+              An innovative marine clean-tech vessel engineered at the Vellore Institute of Technology. Integrating superhydrophobic recovery materials and continuous vacuum suction extraction for high-throughput hydrocarbon recovery.
             </motion.p>
 
             {/* Action Buttons */}
@@ -128,7 +116,7 @@ export const HeroSection: React.FC = () => {
             </motion.div>
           </div>
 
-          {/* Right Column: Hero Visual Frame with Mode Switcher */}
+          {/* Right Column: Hero Visual Frame with Mode Switcher (Clean, Zero Text Overlap) */}
           <motion.div
             initial={{ opacity: 0, scale: 0.98, x: 24 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
@@ -166,8 +154,8 @@ export const HeroSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Architectural Frame with Offset Shadow */}
-            <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-slate-950 border border-slate-700/80 shadow-md sm:shadow-xl aspect-[4/3] sm:aspect-[16/11] lg:aspect-[5/4] group w-full">
+            {/* Architectural Frame - Completely Clean with Zero Text Overlap */}
+            <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-slate-950 border border-slate-700/80 shadow-md sm:shadow-xl aspect-[4/3] sm:aspect-[16/11] lg:aspect-[5/4] w-full">
               {visualMode === 'render' ? (
                 <div className="relative w-full h-full">
                   <img
@@ -175,46 +163,10 @@ export const HeroSection: React.FC = () => {
                     alt="Autonomous Hydrophobic Skimmer Operating on Marine Oil Spill"
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
-
-                  {/* Asymmetrical Top-Right Tag */}
-                  <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-xl border border-slate-200/90 shadow-2xs text-left">
-                    <span className="text-[9px] font-bold uppercase tracking-wider text-slate-400 block">
-                      Autonomous Vessel
-                    </span>
-                    <span className="text-xs font-mono font-bold text-[#0B2A3C]">
-                      Surface Skimmer Pod
-                    </span>
-                  </div>
-
-                  {/* Asymmetrical Bottom-Left Cover Caption */}
-                  <div className="absolute bottom-4 left-4 right-4 sm:bottom-5 sm:left-5 sm:right-5 text-white">
-                    <span className="text-[9px] sm:text-[10px] uppercase font-mono tracking-widest text-sky-300 block mb-0.5">
-                      Vellore Institute of Technology · CO2 RGTC
-                    </span>
-                    <h3 className="text-sm sm:text-base font-bold text-white tracking-tight leading-snug">
-                      High-Selectivity Hydrocarbon Uptake via Superhydrophobic Surface Matrix
-                    </h3>
-                  </div>
                 </div>
               ) : (
                 <SkimmerSchematic className="w-full h-full" />
               )}
-            </div>
-
-            {/* Asymmetric Offset Floating Accent Pill */}
-            <div className="hidden sm:flex absolute -bottom-5 -left-5 bg-white border border-slate-200 rounded-2xl p-4 shadow-lg items-center gap-3.5 z-20">
-              <div className="w-10 h-10 rounded-xl bg-sky-50 flex items-center justify-center font-mono font-bold text-sm text-[#076E73] border border-sky-100">
-                <Cpu className="w-5 h-5 text-[#076E73]" />
-              </div>
-              <div className="text-left pr-2">
-                <span className="text-xs font-bold text-slate-900 block">
-                  AI & IoT Telemetry
-                </span>
-                <span className="text-[11px] text-slate-500">
-                  Real-time GPS & oil level monitoring
-                </span>
-              </div>
             </div>
           </motion.div>
         </div>

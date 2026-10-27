@@ -180,30 +180,7 @@ export const SkimmerSchematic: React.FC<{ className?: string; interactive?: bool
           <text x="33" y="344" fill="#38BDF8" fontSize="8" fontFamily="monospace" fontWeight="bold">DUAL BLDC DRIVE</text>
           <text x="33" y="355" fill="#94A3B8" fontSize="7.5" fontFamily="monospace">IP68 WATERPROOF</text>
         </g>
-
-        {/* HUD TELEMETRY BADGES (Lower Overlay) */}
-        <g transform="translate(40, 440)">
-          <rect x="0" y="0" width="170" height="34" rx="6" fill="#0B2A3C" stroke="#0284C7" strokeWidth="1" />
-          <text x="12" y="14" fill="#64748B" fontSize="8" fontFamily="monospace" fontWeight="bold">THROUGHPUT RATING</text>
-          <text x="12" y="28" fill="#38BDF8" fontSize="12" fontFamily="monospace" fontWeight="bold">1,800 LITERS / HR</text>
-        </g>
-
-        <g transform="translate(590, 440)">
-          <rect x="0" y="0" width="170" height="34" rx="6" fill="#0B2A3C" stroke="#10B981" strokeWidth="1" />
-          <text x="12" y="14" fill="#64748B" fontSize="8" fontFamily="monospace" fontWeight="bold">STAGE VALIDATION</text>
-          <text x="12" y="28" fill="#34D399" fontSize="12" fontFamily="monospace" fontWeight="bold">TRL 5 PHYSICAL RIG</text>
-        </g>
       </svg>
-
-      {/* Blueprint Header Watermark */}
-      <div className="absolute top-3 left-4 sm:top-4 sm:left-5 z-20 pointer-events-none">
-        <span className="text-[9px] sm:text-[10px] font-mono uppercase tracking-widest text-sky-400 block font-bold">
-          ENGINEERING SCHEMATIC · DWG-01-MK2
-        </span>
-        <span className="text-xs sm:text-sm font-mono font-bold text-white block">
-          THE WATER CREW · AUTONOMOUS SKIMMER MK-2
-        </span>
-      </div>
     </div>
   )
 }
@@ -268,14 +245,6 @@ export const BarrierSchematic: React.FC<{ className?: string }> = ({ className =
           </text>
         </g>
       </svg>
-      <div className="absolute top-3 left-4 z-20 pointer-events-none">
-        <span className="text-[9px] font-mono uppercase tracking-widest text-sky-400 font-bold block">
-          SCHEMATIC · SYS-02
-        </span>
-        <span className="text-xs font-mono font-bold text-white block">
-          ACTIVE CONTAINMENT PERIMETER
-        </span>
-      </div>
     </div>
   )
 }
@@ -331,14 +300,6 @@ export const TelemetrySchematic: React.FC<{ className?: string }> = ({ className
           LATENCY &lt; 120 ms · IP68
         </text>
       </svg>
-      <div className="absolute top-3 left-4 z-20 pointer-events-none">
-        <span className="text-[9px] font-mono uppercase tracking-widest text-emerald-400 font-bold block">
-          SCHEMATIC · SYS-03
-        </span>
-        <span className="text-xs font-mono font-bold text-white block">
-          TELEMETRY & SENSOR ARRAY
-        </span>
-      </div>
     </div>
   )
 }
@@ -406,14 +367,6 @@ export const FlumeLabSchematic: React.FC<{ className?: string }> = ({ className 
           12.00 METERS RECIRCULATING WATER CHANNEL
         </text>
       </svg>
-      <div className="absolute top-3 left-4 z-20 pointer-events-none">
-        <span className="text-[9px] font-mono uppercase tracking-widest text-sky-400 font-bold block">
-          FACILITY SCHEMATIC · LAB-01
-        </span>
-        <span className="text-xs font-mono font-bold text-white block">
-          VIT MULTIPHASE HYDRO-FLUME TANK
-        </span>
-      </div>
     </div>
   )
 }
@@ -480,14 +433,6 @@ export const CncMachiningSchematic: React.FC<{ className?: string }> = ({ classN
           <text x="528" y="189" fill="#94A3B8" fontSize="7.5" fontFamily="monospace">TOLERANCE ±0.02 mm</text>
         </g>
       </svg>
-      <div className="absolute top-3 left-4 z-20 pointer-events-none">
-        <span className="text-[9px] font-mono uppercase tracking-widest text-sky-400 font-bold block">
-          FACILITY SCHEMATIC · LAB-02
-        </span>
-        <span className="text-xs font-mono font-bold text-white block">
-          5-AXIS CNC PRECISION DISC FABRICATION
-        </span>
-      </div>
     </div>
   )
 }
